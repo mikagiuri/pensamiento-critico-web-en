@@ -40,7 +40,7 @@ const CAMINOS = [
     ]
    },
    "preguntar": {
-    "texto": "They answer you: ‘Ane's cousin said so, she knows the headteacher.’ A couple of people call you a killjoy for asking.",
+    "texto": "They answer you: ‘A girl in our class's cousin said so, she knows the headteacher.’ A couple of people call you a killjoy for asking.",
     "opciones": [
      {
       "t": "Stay quiet so as not to look bad.",
@@ -103,7 +103,7 @@ const CAMINOS = [
   "start": "inicio",
   "escenas": {
    "inicio": {
-    "texto": "At break, your group of friends is laughing at a photo of Iker, from your class, tripping in PE. Mikel suggests posting it on Instagram with a meme. Everyone looks at you, waiting for your reaction.",
+    "texto": "At break, your group of friends is laughing at a photo of a boy in your class tripping in PE. A classmate suggests posting it on Instagram with a meme. Everyone looks at you, waiting for your reaction.",
     "opciones": [
      {
       "t": "Laugh and say: ‘Post it!’",
@@ -120,23 +120,23 @@ const CAMINOS = [
     ]
    },
    "sube": {
-    "texto": "The photo gets two hundred ‘likes’ and a pile of comments. The next day Iker doesn't come to class. In the group they say: ‘It was a joke, he can't take anything.’",
+    "texto": "The photo gets two hundred ‘likes’ and a pile of comments. The next day the boy in the photo doesn't come to class. In the group they say: ‘It was a joke, he can't take anything.’",
     "opciones": [
      {
       "t": "Agree with them: ‘It was just a joke.’",
       "to": "f_broma"
      },
      {
-      "t": "Message Iker privately to see how he is.",
+      "t": "Message the boy in the photo privately to see how he is.",
       "to": "f_reparar"
      }
     ]
    },
    "paso": {
-    "texto": "Mikel mocks you: ‘You're so boring.’ But Unai, who had been quiet, looks at you and nods: he seems to think like you.",
+    "texto": "The one who suggested posting it mocks you: ‘You're so boring.’ But a girl in the group, who had been quiet, looks at you and nods: she seems to think like you.",
     "opciones": [
      {
-      "t": "Explain my reasons and look for Unai's support.",
+      "t": "Explain my reasons and look for that girl's support.",
       "to": "f_valiente"
      },
      {
@@ -149,7 +149,7 @@ const CAMINOS = [
     "texto": "The photo gets posted anyway. During the afternoon you can't stop thinking about it and you feel uncomfortable.",
     "opciones": [
      {
-      "t": "Talk to Iker or tell your tutor.",
+      "t": "Talk to the boy in the photo or tell your tutor.",
       "to": "f_reparar"
      },
      {
@@ -163,19 +163,19 @@ const CAMINOS = [
    "f_broma": {
     "emoji": "😶",
     "titulo": "Just a joke?",
-    "texto": "Iker takes days to come back and avoids the group. The photo keeps circulating even though you have already deleted it.",
+    "texto": "The boy in the photo takes days to come back and avoids the group. The photo keeps circulating even though you have already deleted it.",
     "idea": "A joke is funny for everyone; if only some laugh at another's expense, it is humiliation. What is posted on the internet cannot be fully taken back."
    },
    "f_reparar": {
     "emoji": "🤝",
     "titulo": "It is never too late to make amends",
-    "texto": "Iker appreciates the message. With the tutor's help, the photo is taken down and the matter is discussed in tutorial time.",
+    "texto": "The boy in the photo appreciates the message. With the tutor's help, the photo is taken down and the matter is discussed in tutorial time.",
     "idea": "Making amends for the harm (saying sorry, keeping someone company, telling an adult) is also taking sides. Empathy: putting yourself in the other person's place and acting accordingly."
    },
    "f_valiente": {
     "emoji": "🦁",
     "titulo": "Saying no in a group",
-    "texto": "With Unai on your side, the plan fizzles out. The photo is not posted. Mikel grumbles, but nothing else happens.",
+    "texto": "With that girl on your side, the plan fizzles out. The photo is not posted. The one who suggested it grumbles, but nothing else happens.",
     "idea": "In Asch's experiment, it was enough for a single person in the group to disagree for the others to dare to say what they thought. An ally changes everything."
    },
    "f_testigo": {
