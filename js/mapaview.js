@@ -45,7 +45,7 @@ const MAPA_DESC = {
   cronogramas: "Timelines of authors and periods.",
   genealogias: "Who influenced whom: masters, disciples and rivals.",
   esquemas: "Outlines of the main ideas of each topic.",
-  esqautor: "One outline per author, for the PAU.",
+  esqautor: "One summary per author, for the PAU.",
   diapositivas: "Presentations of the topics.",
   rescritura: "Learn to rewrite a text in your own words.",
   pistas: "Problems with hints that open up little by little.",
