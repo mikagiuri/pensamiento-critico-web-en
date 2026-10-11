@@ -29,7 +29,7 @@ const MAPA_DESC = {
   glosario: "The concepts of each topic, with their definition and origin.",
   ilustres: "Biographies of the thinkers and period profiles.",
   citas: "Famous sayings of the philosophers, explained.",
-  adagios: "Classical mottoes in Latin and Greek, with their history.",
+  adagios: "Classical Latin and Greek adages, and famous quotations from philosophers: what they mean and when to use them.",
   duelo: "Debate against the computer: catch its fallacies or answer with stronger reasons, without losing your composure.",
   epocas: "The cards for each era, from ancient Greece to today, with their picture of the cosmos.",
   polemicas: "Thinkers who lived at the same time and clashed: choose whose side you are on and why.",
