@@ -31,6 +31,7 @@ const MAPA_DESC = {
   citas: "Famous sayings of the philosophers, explained.",
   adagios: "Classical mottoes in Latin and Greek, with their history.",
   duelo: "Debate against the computer: catch its fallacies or answer with stronger reasons, without losing your composure.",
+  epocas: "The cards for each era, from ancient Greece to today, with their picture of the cosmos.",
   polemicas: "Thinkers who lived at the same time and clashed: choose whose side you are on and why.",
   perseguidos: "Philosophers and scientists punished for their ideas: what happened and what is often told wrongly.",
   comunidades: "Schools and circles of thinkers, and the places where they met.",
