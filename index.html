@@ -56,7 +56,7 @@
       <div class="navsec">
         <span class="navgroup" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">Games</span>
         <div class="navmenu">
-          <a class="gamelink" href="media/juego_duelo_de_razones_en.html#eso" target="_blank" rel="noopener">Battle of reasons ↗</a>
+          <button data-view="duelo">Duel of Reasons</button>
           <button data-view="mundo">If the class were the world</button>
           <button data-view="camino">Choose your path</button>
           <button data-view="dilemas">Ethical dilemmas</button>
@@ -216,6 +216,17 @@
   <!-- CITAS -->
   
 
+  <section class="view" id="duelo">
+    <!-- (11-10) Duelo de razones: antes juego aparte (media/juego_duelo_de_razones*.html, cinco copias); ahora sección (duelo.js + dueloview.js).
+         En todas las webs: cada una muestra los debates de su nivel (eso | fil | hf). -->
+    <p class="eyebrow">Games</p>
+    <h1 class="title">Duel of Reasons</h1>
+    <div class="due-top"><button type="button" class="due-proybtn" id="dueproy">Projector mode</button></div>
+    <div id="duelobox"></div>
+  </section>
+
+  
+
   
 
   <!-- TARJETAS -->
@@ -365,6 +376,7 @@
       <h2>Terminology of the translations</h2>
       <ul>
         <li>Basque: terminology decisions are made with the <em>Euskaltzaindiaren Hiztegia</em> (the dictionary of the Royal Academy of the Basque Language), and each consultation is linked here. 11-10-2026: ‘época’, meaning a historical period, is ‘aro’ (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=aro" target="_blank" rel="noopener">aro</a>, sense 4: each of the parts into which historical time is divided), not ‘garai’ (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=garai" target="_blank" rel="noopener">garai</a>, a period of time in general); ‘falacia’ (fallacy) is ‘falazia’ (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=falazia" target="_blank" rel="noopener">falazia</a>), not ‘faltsukeria’, which means ‘falsehood’.</li>
+        <li>Basque, 12-10-2026: ‘libre albedrío’ (free will) is ‘borondate askea’ (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=borondate" target="_blank" rel="noopener">borondate</a>, sense 1: the capacity to will, to do or not do something, or to choose freely), the form the site already uses.</li>
       </ul>
       <!-- NOTAS-ARETE-INICIO -->
       <!-- NOTAS-ARETE-FIN -->
@@ -373,6 +385,7 @@
         <li>Works of art and portraits from Wikimedia Commons and from museums and libraries (Metropolitan Museum, Rijksmuseum, LACMA, Wellcome Collection, New York Public Library, Library of Congress, Walters Art Museum), in the public domain or under CC0, CC BY and CC BY-SA licences. Each image carries its credit.</li>
         <li>Logic Corner: lithographs by Honoré Daumier (also from the National Gallery of Art), engravings by Francisco de Goya (Museo del Prado), William Hogarth (National Gallery of Art) and James Gillray (Library of Congress), bird plates by John James Audubon and John Gerrard Keulemans, and the photograph of Arthur Schopenhauer taken by Johann Schäfer in 1859, all in the public domain, via Wikimedia Commons.</li>
         <li>Illustrations generated with artificial intelligence (Gemini and Nano Banana, from Google, and FLUX).</li>
+        <li>The infographics are our own work, made with the help of artificial intelligence tools and checked by the teacher.</li>
       </ul>
       <h2>Films, series and videos</h2>
       <ul>
@@ -385,10 +398,15 @@
         <li>Spectral, IBM Plex and Fraunces typefaces (SIL Open Font License).</li>
         <li>Fredoka and Nunito Sans typefaces (SIL Open Font License).</li>
       </ul>
+      <h2>Licence</h2>
+      <ul>
+        <li>The original material on this website (texts, activities, quizzes, outlines and infographics) is published under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licence (CC BY-NC-SA 4.0)</a>: it may be copied and adapted provided its source is credited, it is not used commercially and it is shared under the same licence.</li>
+        <li>Excluded from this licence are the PAU texts, translations published by publishers, and third-party images and texts, which keep their own licence, as stated on this page and in each credit.</li>
+      </ul>
     </article>
   </section>
 </main>
-<footer class="wrap sitefoot"><a href="#mapa">Site map</a> · <a href="#fuentes">Sources and notice</a></footer>
+<footer class="wrap sitefoot"><a href="#mapa">Site map</a> · <a href="#fuentes">Sources and notice</a> · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">CC BY-NC-SA 4.0</a></footer>
 
 <script src="js/store.js"></script>
 <script src="js/data.js"></script>
@@ -437,6 +455,8 @@
 <script src="js/juegosucio.js"></script>
 <script src="js/juegosucioview.js"></script>
 <script src="js/cruces_tesis.js"></script>
+<script src="js/duelo.js"></script>
+<script src="js/dueloview.js"></script>
 <!-- mermaid se carga bajo demanda al abrir Esquemas (js/lazy_libs.js) -->
 <script src="js/esquemas.js"></script>
 <script src="js/esq_grid.js"></script>
