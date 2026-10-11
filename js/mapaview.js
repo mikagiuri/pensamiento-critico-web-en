@@ -32,6 +32,8 @@ const MAPA_DESC = {
   adagios: "Classical mottoes in Latin and Greek, with their history.",
   duelo: "Debate against the computer: catch its fallacies or answer with stronger reasons, without losing your composure.",
   polemicas: "Thinkers who lived at the same time and clashed: choose whose side you are on and why.",
+  perseguidos: "Philosophers and scientists punished for their ideas: what happened and what is often told wrongly.",
+  comunidades: "Schools and circles of thinkers, and the places where they met.",
   mundo: "If the class were the world: the planet’s data, in your classroom.",
   camino: "Stories in which you choose what to do and see the consequences.",
   eudaimonia: "A game about happiness according to Aristotle.",
@@ -65,7 +67,7 @@ const MAPA_DESC = {
   signos: "Sign language course."
 };
 /* cuántos elementos tiene cada sección (si su colección está cargada en esta web) */
-const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", ilustres: "ILUSTRES", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS",
+const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", ilustres: "ILUSTRES", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
   infografias: "INFOGRAFIAS", mapas: "MAPS", esquemas: "ESQUEMAS", cronogramas: "CRONOGRAMAS", genealogias: "GENEALOGIAS", lecturas: "LECTURAS",
   galeria: "GALERIA", dilemas: "DILEMAS", disertaciones: "DISERTACIONES", nudos: "NUDOS", pistas: "PISTAS", materiales: "MATERIALS" };
 function mapaG(name){ try { return (0, eval)("typeof " + name + " !== 'undefined' ? " + name + " : undefined"); } catch (e){ return undefined; } }
