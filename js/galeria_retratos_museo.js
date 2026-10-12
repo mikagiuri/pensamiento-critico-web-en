@@ -5,7 +5,7 @@
    Bloque por época, como galeria_retratos2.js. */
 const RETRATOS_BLOQUE = {
   "Socrates": "A", "Plato": "A", "Aristotle": "A", "Hipatia de Alejandría": "A", "Aspasia": "A", "Alcibíades": "A",
-  "Alejandro Magno": "A", "Diógenes": "A", "Epicurus": "A", "Séneca": "A", "Marco Aurelio": "A",
+  "Alejandro Magno": "A", "Diógenes": "A", "Epicurus": "A", "Seneca": "A", "Marco Aurelio": "A",
   "La Escuela de Atenas": "A", "La muerte de Sócrates": "A", "La Academia de Platón": "A", "La alegoría de la caverna": "A", "El oráculo de Delfos": "A",
   "Augustine of Hippo": "B", "Thomas Aquinas": "B", "Averroes": "B", "Descartes": "B", "Spinoza": "B", "John Locke": "B",
   "David Hume": "B", "Rousseau": "B", "Kant": "B", "Hegel": "B", "Karl Marx": "B", "Nietzsche": "B", "Schopenhauer": "B",
