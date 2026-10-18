@@ -49,7 +49,7 @@
     esquemas: "loadEsq", pau: "loadPau", mapas: "loadMap"
   };
   /* orden de los grupos en los resultados */
-  var ORDER = ["Section", "Theory", "Section", "Glossary", "Reading", "Passage", "Quotation", "Question", "Card", "Outline", "Material", "Story", "Infographic", "Quiz", "Cards", "PAU", "Illustrious Thinker", "Clase"];
+  var ORDER = ["Section", "Theory", "Section", "Glossary", "Reading", "Passage", "Quotation", "Question", "Card", "Outline", "Material", "Story", "Infographic", "Quiz", "Cards", "PAU", "Biography", "Clase"];
 
   var index = null;
   /* entrada: { type, label, meta, go, arg, text (fragmento original donde buscar), hay (fold de label+meta+clave),
@@ -97,7 +97,7 @@
       (function walk(n){ parts.push((n.rel || "") + " " + (n.t || "") + " " + (n.d || "") + " " + (n.a || "")); (n.c || []).forEach(walk); })({ c: i.v2.ramas || [] });
       return parts.join(" · "); });
     addAll(typeof PAU !== "undefined" ? PAU : null, "pau", function(i){ return i.title; }, function(i){ return i.kick || "PAU"; }, "PAU");
-    addAll(typeof ILUSTRES !== "undefined" ? ILUSTRES : null, "ilustres", function(i){ return i.name; }, function(i){ return i.dates + (i.role ? " · " + i.role : ""); }, "Illustrious Thinker", function(i){ return [i.idea, i.bio, i.anecdota].filter(Boolean).join(" · "); });
+    addAll(typeof ILUSTRES !== "undefined" ? ILUSTRES : null, "ilustres", function(i){ return i.name; }, function(i){ return i.dates + (i.role ? " · " + i.role : ""); }, "Biography", function(i){ return [i.idea, i.bio, i.anecdota].filter(Boolean).join(" · "); });
     /* (11-10) fichas de época (epocas_fichas.js): se abren en Ilustres («epoca-<clave>») */
     if (typeof EPOCAS_FICHAS !== "undefined" && EPOCAS_FICHAS && typeof iluNombreFicha === "function" && document.getElementById("ilustres")){
       var EFI = {}; Object.keys(EPOCAS_FICHAS).forEach(function(k){ EFI["epoca-" + k] = EPOCAS_FICHAS[k]; });
