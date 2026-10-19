@@ -44,6 +44,7 @@ const MAPA_DESC = {
   dilemas: "Hard cases to debate what is right.",
   logica: "Truth tables, syllogisms, the square of opposition and diagrams.",
   leibniz: "Leibniz and his inventions: the calculating machine, binary and calculus.",
+  palabra: "The Art of the Word: poetics, rhetoric and topics, from Aristotle to today’s literature, theatre and advertising.",
   universo: "Aristotle’s universe: the four elements, the fall of bodies, the soul and living beings, and the cracks opened by modern science.",
   infografias: "Each topic summed up in one image.",
   galeria: "Works of art and illustrations for the topics.",
