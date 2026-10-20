@@ -339,22 +339,30 @@
     ],
     "fil-t2": [
       { k: "hf-antropologia", n: 7, tit: "Classical anthropology: Socrates, Plato and Aristotle", txt: "In Year 1 you saw the soul in the mind-body problem, with Plato and Aristotle; in Year 2 you will read about the turn of Socrates and the three conceptions of the psyche: soul, virtue and the good life." },
-      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw Descartes’s dualism and Hobbes’s materialism; in Year 2 you will see that modern debate in full, with Spinoza’s monism and Locke’s empiricist turn." }
+      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw Descartes’s dualism and Hobbes’s materialism; in Year 2 you will see that modern debate in full, with Spinoza’s monism and Locke’s empiricist turn." },
+      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; in Year 2 you will see them together as the ‘masters of suspicion’, who throw into crisis the idea of a subject that is master of itself." }
     ],
     "fil-t3": [
       { k: "hf-racionalismo", n: 14, tit: "Rationalism and empiricism: Descartes and Hume", txt: "In Year 1 you saw rationalism and empiricism as two opposing sources of knowledge; in Year 2 you will read Descartes and Hume from the inside: methodical doubt, the cogito and the critique of causality." },
-      { k: "hf-kant", n: 19, tit: "Kant’s critical philosophy and the problem of metaphysics", txt: "In Year 1 you saw Kant’s criticism unite reason and experience; in Year 2 you will see how space, time and the categories order experience and why we do not know things ‘in themselves’." }
+      { k: "hf-kant", n: 19, tit: "Kant’s critical philosophy and the problem of metaphysics", txt: "In Year 1 you saw Kant’s criticism unite reason and experience; in Year 2 you will see how space, time and the categories order experience and why we do not know things ‘in themselves’." },
+      { k: "hf-sofistas", n: 5, tit: "The Greek Enlightenment: the Sophists, Socrates and Aspasia", txt: "In Year 1 you saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; in Year 2 you will see the Sophists and the anthropological turn of the Greek Enlightenment, with Socrates and Aspasia." },
+      { k: "hf-platon", n: 6, tit: "Plato: the theory of Ideas and the Republic", txt: "In Year 1 you saw Plato’s distinction between opinion (doxa) and science (episteme) and his idealism of the Ideas; in Year 2 you will read his full theory of Ideas and the just city of the Republic." },
+      { k: "hf-modernidad", n: 13, tit: "The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution", txt: "In Year 1 you saw Galileo’s Scientific Revolution and the hypothetico-deductive method, and how the idea of science and of the cosmos changed; in Year 2 you will see that revolution within the birth of modernity, with the Renaissance and the Reformation." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "Classical ethics: intellectualism, virtues and eudaimonia", txt: "In Year 1 you saw virtue as a mean and the intellectualism of Socrates; in Year 2 you will read the whole of classical ethics: areté, eudaimonía and the answers of Socrates, Plato and Aristotle." },
       { k: "hf-helenismo", n: 10, tit: "Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism", txt: "In Year 1 you saw Epicurus’s hedonism as an ethics of happiness; in Year 2 you will see the whole of Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism answering the question of how to live in an uncertain world." },
-      { k: "hf-etica-deber", n: 20, tit: "Ethics of happiness and ethics of duty: Kant versus utilitarianism", txt: "In Year 1 you saw Kant’s formal ethics and the utilitarianism of Bentham and Mill; in Year 2 you will read that clash in depth: the ethics of duty against the ethics of happiness." }
+      { k: "hf-etica-deber", n: 20, tit: "Ethics of happiness and ethics of duty: Kant versus utilitarianism", txt: "In Year 1 you saw Kant’s formal ethics and the utilitarianism of Bentham and Mill; in Year 2 you will read that clash in depth: the ethics of duty against the ethics of happiness." },
+      { k: "hf-sofistas", n: 5, tit: "The Greek Enlightenment: the Sophists, Socrates and Aspasia", txt: "In Year 1 you saw Socrates’ moral intellectualism, for whom no one does wrong knowingly; in Year 2 you will see it in its historical context: the democratic Athens of the Sophists, Socrates and Aspasia." }
     ],
     "fil-t6": [
       { k: "hf-contrato", n: 16, tit: "The origin of society and power: Machiavelli and the social contract", txt: "In Year 1 you saw the social contract of Hobbes, Locke and Rousseau as the origin of the State; in Year 2 you will also read Machiavelli and Montesquieu’s idea of limiting power." },
       { k: "hf-utilitarismo", n: 17, tit: "Utilitarianism and liberalism: the foundations of capitalism", txt: "In Year 1 you saw Locke’s political liberalism and the social contract; in Year 2 you will see the foundations of economic liberalism: the utilitarianism of Bentham and Mill and Adam Smith’s market." },
       { k: "hf-capitalismo", n: 22, tit: "The critique of capitalism: from Marx to Rawls", txt: "In Year 1 you saw Marx’s critique of capitalism: class struggle, surplus value and alienation; in Year 2 you will read how it continues in Gramsci, the Frankfurt School, Habermas and Rawls." },
-      { k: "hf-beauvoir", n: 26, tit: "Contemporary feminism: Simone de Beauvoir", txt: "In Year 1 you saw Beauvoir in the waves of feminism and her ‘One is not born, but rather becomes, a woman’; in Year 2 you will read her existentialism in depth, and Butler, Fraser and Nussbaum." }
+      { k: "hf-beauvoir", n: 26, tit: "Contemporary feminism: Simone de Beauvoir", txt: "In Year 1 you saw Beauvoir in the waves of feminism and her ‘One is not born, but rather becomes, a woman’; in Year 2 you will read her existentialism in depth, and Butler, Fraser and Nussbaum." },
+      { k: "hf-platon", n: 6, tit: "Plato: the theory of Ideas and the Republic", txt: "In Year 1 you saw Plato’s Republic as the first great utopia, the just city of the philosopher-kings; in Year 2 you will read it in depth, together with his theory of the soul and of the Ideas." },
+      { k: "hf-politica", n: 9, tit: "Classical politics: Plato and Aristotle", txt: "In Year 1 you saw Aristotle define the human being as a political animal and the just city of the Republic; in Year 2 you will compare in depth the two great political models of Plato and Aristotle." },
+      { k: "hf-ilustracion", n: 18, tit: "The Enlightenment project: the power and limits of reason", txt: "In Year 1 you saw human rights, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; in Year 2 you will see the Enlightenment project from which those rights and that critique arise: confidence in reason and its limits." }
     ],
     "hf-antropologia": [
       { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the soul in the mind-body problem, with Plato’s dualism and Aristotle’s soul-as-form; here you have read about the turn of Socrates and the three conceptions of the psyche." }
@@ -380,6 +388,9 @@
     "hf-helenismo": [
       { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Epicurus’s hedonism and his ataraxia; here you have read the whole of Hellenism: four schools answering the question of how to live well in an uncertain world." }
     ],
+    "hf-ilustracion": [
+      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw human rights, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; here you have studied the Enlightenment project from which those rights and that critique arise." }
+    ],
     "hf-kant": [
       { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Kant’s criticism as a synthesis of rationalism and empiricism; here you have read his critical philosophy in depth: phenomenon, noumenon and the limits of reason." }
     ],
@@ -390,14 +401,31 @@
       { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the mind-body problem, with Descartes’s dualism and Hobbes’s materialism; here you have read that modern debate in full, with Spinoza’s monism and Locke’s turn." },
       { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw monism, dualism and materialism as positions on substance; here you have read that debate in the modern age, with Descartes, Hobbes, Spinoza and Locke." }
     ],
+    "hf-modernidad": [
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw the Scientific Revolution and Galileo’s hypothetico-deductive method, and how they changed the idea of science and of the cosmos; here you have gone through the Renaissance and that revolution as the birth of modernity." }
+    ],
     "hf-mito": [
       { k: "fil-t1", n: 1, tit: "What is philosophy?", txt: "In Year 1 you already saw the move from myth to logos and the features of mythical thought; here you have read the birth of philosophy in Ionia, explaining nature without the supernatural." }
+    ],
+    "hf-platon": [
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Plato’s distinction between opinion (doxa) and science (episteme) and his idealism of the Ideas; here you have studied the full theory of Ideas and the path of knowledge towards the Good." },
+      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Plato’s Republic as the first great utopia, the just city ruled by philosophers; here you have read it in depth, together with his theory of the soul and of the Ideas." }
+    ],
+    "hf-politica": [
+      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Aristotle define the human being as a political animal and Plato’s Republic as a just city; here you have compared in depth their two models of the best community." }
     ],
     "hf-preso": [
       { k: "fil-t1", n: 1, tit: "What is philosophy?", txt: "In Year 1 you already saw Thales’s arché as the first step of logos; here you have gone through the Presocratics’ answers to the question of reality and of the principle of everything." }
     ],
     "hf-racionalismo": [
       { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw rationalism and empiricism in the table of sources of knowledge; here you have read Descartes and Hume from the inside: doubt, the cogito and the critique of causality." }
+    ],
+    "hf-sofistas": [
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; here you have placed it in its world: the Greek Enlightenment and the Sophists’ turn towards the human being and the polis." },
+      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Socrates’ moral intellectualism, for whom no one does wrong knowingly; here you have met the Socrates who defended it, against the Sophists, in democratic Athens." }
+    ],
+    "hf-sospecha": [
+      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; here you have read them together as the masters of suspicion." }
     ],
     "hf-utilitarismo": [
       { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Locke’s political liberalism and the social contract; here you have read the foundations of economic liberalism: the utilitarianism of Bentham and Mill and Adam Smith’s market." }
@@ -662,5 +690,5 @@
     if (G("quizKey") != null) renderQuiz(G("quizKey"));
   } catch (e){}
 
-  window.Itinerario = { itinerario: itinerario, temaOf: temaOf, go: go, epocaFicha: epocaFicha, gloTema: gloTema, temasDe: temasDe, esAnexo: esAnexo };
+  window.Itinerario = { itinerario: itinerario, temaOf: temaOf, go: go, epocaFicha: epocaFicha, gloTema: gloTema, temasDe: temasDe, esAnexo: esAnexo, PUENTES: PUENTES };
 })();
