@@ -49,15 +49,18 @@ if (typeof MATERIALS !== "undefined" && Array.isArray(GALERIA)){
    no tienen época. Los grupos de museo/contexto genéricos (sin autor) caen por bloque: A→Antigua, B→«medmod»
    (abarca Medieval y Moderna, solo con «Todos»), C→Contemporánea. EDITABLE: una unidad nueva se apunta aquí. */
 const GAL_UNIDAD_EP = {
-  "Augustine of Hippo": "med", "Avicena": "med", "Ockham": "med", "Thomas Aquinas": "med",
-  "Del medievo a la modernidad": "mod", "Renacimiento y ciencia": "mod", "Descartes": "mod", "Rationalism and empiricism": "mod",
-  "El debate metafísico moderno": "mod", "Sociedad y poder": "mod", "Hume": "mod", "Utilitarianism and liberalism": "mod",
-  "The Enlightenment": "ilu", "La filosofía de Kant": "ilu",
-  "La crisis de la modernidad": "con", "Existentialism": "con", "Feminism": "con", "Hannah Arendt": "con",
-  "Las luchas después del marxismo": "con", "Los maestros de la sospecha": "con", "Marx": "con"
+  "Augustine of Hippo": "med", "Avicenna": "med", "Ockham": "med", "Thomas Aquinas": "med",
+  "From the Middle Ages to modernity": "mod", "Renaissance and science": "mod", "Descartes": "mod", "Rationalism and empiricism": "mod",
+  "The modern metaphysical debate": "mod", "Society and power": "mod", "Hume": "mod", "Utilitarianism and liberalism": "mod",
+  "The Enlightenment": "ilu", "Kant's philosophy": "ilu",
+  "The crisis of modernity": "con", "Existentialism": "con", "Feminism": "con", "Hannah Arendt": "con",
+  "Struggles after Marxism": "con", "The masters of suspicion": "con", "Marx": "con"
 };
 function galEpoca(g){
   if (GAL_UNIDAD_EP[g.unidad]) return GAL_UNIDAD_EP[g.unidad];
+  /* (20-10) en las webs traducidas, la clave (ui) y el nombre del grupo (tm) pueden diferir en el apóstrofo o en una palabra */
+  const u = String(g.unidad || "").replace(/[’‘]/g, "'");
+  for (const k in GAL_UNIDAD_EP){ const kk = k.replace(/[’‘]/g, "'"); if (kk === u || (kk.length > 3 && u.indexOf(kk) >= 0)) return GAL_UNIDAD_EP[k]; }
   return ({ A: "ant", B: "medmod", C: "con" })[g.bloque] || null;
 }
 /* épocas y grupos con alguna imagen (en las webs por materia GALERIA llega ya filtrada: 1.º trae «F1» y «PC»; ESO, «CU») */
