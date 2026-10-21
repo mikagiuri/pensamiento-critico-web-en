@@ -24,7 +24,8 @@ const PIS_TXT = {
   seguir: "Try again",
   intentoLb: "Before you see the explanation", intentoTxt: "Write your answer in your own words, even if you are not sure. Then you will compare it with the explanation.",
   intentoGuarda: "What you write is saved only in this browser.", intentoPal: "{n} words (minimum {m})", intentoVer: "See the explanation and compare",
-  tuIntento: "Your attempt", compara: "Compare: did you say it?"
+  tuIntento: "Your attempt", compara: "Compare: did you say it?",
+  mapa: "This author on the map of ideas"
 };
 const PIS_MIN = 8;   // (20-10) palabras mínimas del intento escrito antes de ver la explicación
 
@@ -234,9 +235,20 @@ function pisRescateTest(){
   });
 }
 
+/* (21-10) Puente con Genealogías: la tarjeta declara su autor («ilustre», id de Biografías) y al cierre salen las líneas del
+   mapa de ideas en que aparece, con enlace profundo #genealogias/<línea>. El nombre de la línea sale de GENEALOGIAS, ya traducido.
+   Solo si la web tiene la vista de Genealogías (HF). */
+function pisMapa(it){
+  if (!it.ilustre || typeof GENEALOGIAS === "undefined" || !document.getElementById("genealogias")) return "";
+  const ls = (GENEALOGIAS.lineas || []).filter(l => (l.ilustre || []).indexOf(it.ilustre) >= 0);
+  if (!ls.length) return "";
+  return '<div class="pis-mapa"><div class="pis-glo-lb">' + PIS_TXT.mapa + '</div><div class="pis-mapa-ls">' +
+    ls.map(l => '<a class="pis-mapa-a" href="#genealogias/' + l.id + '" style="--lc:' + l.color + '">' + pisGloFmt(l.name) + ' ›</a>').join("") + '</div></div>';
+}
+
 function pisFin(){
   const f = PIS.it.cierre, u = PIS.st.usadas;
-  pisMarco(1, '<div class="pis-label">' + PIS_TXT.logrado + '</div><h3>' + f.titulo + '</h3>' + f.parrafos.map(x => '<p>' + x + '</p>').join("") + pisGlo(pisGloTodos(PIS.it)) +
+  pisMarco(1, '<div class="pis-label">' + PIS_TXT.logrado + '</div><h3>' + f.titulo + '</h3>' + f.parrafos.map(x => '<p>' + x + '</p>').join("") + pisGlo(pisGloTodos(PIS.it)) + pisMapa(PIS.it) +
     '<p class="pis-small">' + (u === 0 ? PIS_TXT.sinAyuda : PIS_TXT.usaste.replace("{n}", u)) + '</p>');
   const sig = f.siguiente && PISTAS.find(x => x.id === f.siguiente);
   pisBotones(sig ? [PIS_TXT.siguiente + ' ' + sig.titulo, true, () => loadPista(sig.id)] : null,
