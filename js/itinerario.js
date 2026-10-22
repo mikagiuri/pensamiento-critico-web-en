@@ -205,7 +205,8 @@
     if (hereIdx < 0 && here.go) pasos.forEach(function(p, i){ if (hereIdx < 0 && p.id === here.go) hereIdx = i; });
     return hereIdx;
   }
-  function btn(x, cls){ return '<button class="' + (cls || "itin-lnk") + '" type="button" data-igo="' + esc(x.go) + '" data-iarg="' + esc(x.arg) + '">' + esc(x.label) + (x.size ? ' <i>' + esc(x.size) + '</i>' : '') + '</button>'; }
+  function btn(x, cls){ if (x.href) return '<a class="' + (cls || "itin-lnk") + '" href="' + esc(x.href) + '">' + esc(x.label) + '</a>';   /* (22-10) enlace profundo (#vista/arg) */
+    return '<button class="' + (cls || "itin-lnk") + '" type="button" data-igo="' + esc(x.go) + '" data-iarg="' + esc(x.arg) + '">' + esc(x.label) + (x.size ? ' <i>' + esc(x.size) + '</i>' : '') + '</button>'; }
   /* Tira de UNA línea «De este tema» (Tarjetas, Cuestionarios, Clases): un enlace por paso o por tipo de repaso. */
   function stripHtml(pasos, here, extra){
     var hereIdx = hereIndex(pasos, here), out = [];
@@ -306,7 +307,14 @@
   }
   /* rótulo de una sección tal como lo pone el menú (ya traducido); si no está en el menú, el de TXT */
   function navLabel(v, k){ var b = document.querySelector('#tabs [data-view="' + v + '"]'); return b ? strip(b.textContent) : t(k || v); }
-  function logicaDe(subject, tema){ return subject === "fil" && tema === 4 && view("logica") ? [{ go: "logica", arg: "portada", label: navLabel("logica", "logica") }] : []; }
+  /* (22-10, curar_webs lote 2) en HF el Rincón de lógica no está en el menú (opción A del profesor, docs/36): solo lo enlazan
+     los temas que lo necesitan, y a la mesa o pestaña concreta (enlace profundo): los juicios de Kant (T19) y los silogismos (AA). */
+  var LOGICA_HF = { "hf-kant": ["kant", "Kant's judgements"], "hf-aa": ["silogismos", "Syllogisms"] };
+  function logicaDe(subject, tema, key){
+    if (!view("logica")) return [];
+    if (subject === "fil") return tema === 4 ? [{ go: "logica", arg: "portada", label: navLabel("logica", "logica") }] : [];
+    var l = LOGICA_HF[key]; return l ? [{ href: "#logica/" + l[0], label: l[1] }] : [];
+  }
   /* polémicas, comunidades y perseguidos declaran sus temas (claves de THEORY) en «temas» */
   function porTemas(name, go_, teoriaKeys, label){
     var A = G(name); if (!Array.isArray(A) || !view(go_) || !teoriaKeys.length) return [];
@@ -331,7 +339,8 @@
     "fil-metafisica": [
       { k: "hf-medieval", n: 11, tit: "Medieval philosophy: stages, methods and the problem of universals", txt: "In Year 1 you saw the medieval arguments about God, from Anselm and Aquinas; in Year 2 you will see the whole Middle Ages: the relation between faith and reason, its stages and the problem of universals." },
       { k: "hf-fe-razon", n: 12, tit: "Faith and reason: the assimilation of Greek philosophy and the existence of God", txt: "In Year 1 you saw Aquinas’s five ways and the distinction between essence and existence; in Year 2 you will see how Christianity assimilated Greek philosophy, with Augustine, Aquinas, Avicenna and Ockham." },
-      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw monism, dualism and materialism as answers about substance; in Year 2 you will see that debate in the modern age, with Descartes, Hobbes, Spinoza and Locke." }
+      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw monism, dualism and materialism as answers about substance; in Year 2 you will see that debate in the modern age, with Descartes, Hobbes, Spinoza and Locke." },
+      { k: "hf-aa", n: "AA", tit: "Aristotle: the complete system", txt: "In Year 1 you saw Aristotle’s substance, essence and the passage from potentiality to actuality as his answer to Parmenides; in Year 2 you will see his complete system: the categories, the four causes and teleology." }
     ],
     "fil-t1": [
       { k: "hf-mito", n: 3, tit: "The emergence of philosophy: from myth to logos", txt: "In Year 1 you saw the move from myth to logos as the birth of philosophy; in Year 2 you will read the first philosophers of Miletus explaining reality through reason, without gods." },
@@ -340,29 +349,43 @@
     "fil-t2": [
       { k: "hf-antropologia", n: 7, tit: "Classical anthropology: Socrates, Plato and Aristotle", txt: "In Year 1 you saw the soul in the mind-body problem, with Plato and Aristotle; in Year 2 you will read about the turn of Socrates and the three conceptions of the psyche: soul, virtue and the good life." },
       { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw Descartes’s dualism and Hobbes’s materialism; in Year 2 you will see that modern debate in full, with Spinoza’s monism and Locke’s empiricist turn." },
-      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; in Year 2 you will see them together as the ‘masters of suspicion’, who throw into crisis the idea of a subject that is master of itself." }
+      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; in Year 2 you will see them together as the ‘masters of suspicion’, who throw into crisis the idea of a subject that is master of itself." },
+      { k: "hf-existencialismo", n: 25, tit: "Existentialism: Heidegger, Sartre and Spanish philosophy", txt: "In Year 1 you saw the existentialism of Sartre and Beauvoir: ‘existence precedes essence’; in Year 2 you will study it with Kierkegaard, Heidegger and Camus, and with Unamuno, Ortega and María Zambrano." }
     ],
     "fil-t3": [
       { k: "hf-racionalismo", n: 14, tit: "Rationalism and empiricism: Descartes and Hume", txt: "In Year 1 you saw rationalism and empiricism as two opposing sources of knowledge; in Year 2 you will read Descartes and Hume from the inside: methodical doubt, the cogito and the critique of causality." },
       { k: "hf-kant", n: 19, tit: "Kant’s critical philosophy and the problem of metaphysics", txt: "In Year 1 you saw Kant’s criticism unite reason and experience; in Year 2 you will see how space, time and the categories order experience and why we do not know things ‘in themselves’." },
       { k: "hf-sofistas", n: 5, tit: "The Greek Enlightenment: the Sophists, Socrates and Aspasia", txt: "In Year 1 you saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; in Year 2 you will see the Sophists and the anthropological turn of the Greek Enlightenment, with Socrates and Aspasia." },
       { k: "hf-platon", n: 6, tit: "Plato: the theory of Ideas and the Republic", txt: "In Year 1 you saw Plato’s distinction between opinion (doxa) and science (episteme) and his idealism of the Ideas; in Year 2 you will read his full theory of Ideas and the just city of the Republic." },
-      { k: "hf-modernidad", n: 13, tit: "The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution", txt: "In Year 1 you saw Galileo’s Scientific Revolution and the hypothetico-deductive method, and how the idea of science and of the cosmos changed; in Year 2 you will see that revolution within the birth of modernity, with the Renaissance and the Reformation." }
+      { k: "hf-modernidad", n: 13, tit: "The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution", txt: "In Year 1 you learnt the hypothetico-deductive method and saw how the scientific revolution changed the idea of science and of the cosmos; in Year 2 you will see where that method comes from: Galileo joins reason and experience and reads nature in the language of mathematics, a turn that opens modernity and prepares Descartes’s rationalism (Topic 14)." },
+      { k: "hf-existencialismo", n: 25, tit: "Existentialism: Heidegger, Sartre and Spanish philosophy", txt: "In Year 1 you saw Ortega y Gasset’s perspectivism: ‘I am myself and my circumstance’; in Year 2 you will see it alongside the existentialists, with Unamuno and María Zambrano." }
+    ],
+    "fil-t4": [
+      { k: "hf-analitica", n: 24, tit: "Analytic philosophy: Wittgenstein and the linguistic turn", txt: "In Year 1 you saw the symbolic logic of Frege and Russell, which translates language into formulas; in Year 2 you will see how Russell and the early Wittgenstein use that logical analysis in search of a perfect language: this is the linguistic turn of analytic philosophy." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "Classical ethics: intellectualism, virtues and eudaimonia", txt: "In Year 1 you saw virtue as a mean and the intellectualism of Socrates; in Year 2 you will read the whole of classical ethics: areté, eudaimonía and the answers of Socrates, Plato and Aristotle." },
       { k: "hf-helenismo", n: 10, tit: "Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism", txt: "In Year 1 you saw Epicurus’s hedonism as an ethics of happiness; in Year 2 you will see the whole of Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism answering the question of how to live in an uncertain world." },
       { k: "hf-etica-deber", n: 20, tit: "Ethics of happiness and ethics of duty: Kant versus utilitarianism", txt: "In Year 1 you saw Kant’s formal ethics and the utilitarianism of Bentham and Mill; in Year 2 you will read that clash in depth: the ethics of duty against the ethics of happiness." },
-      { k: "hf-sofistas", n: 5, tit: "The Greek Enlightenment: the Sophists, Socrates and Aspasia", txt: "In Year 1 you saw Socrates’ moral intellectualism, for whom no one does wrong knowingly; in Year 2 you will see it in its historical context: the democratic Athens of the Sophists, Socrates and Aspasia." }
+      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Nietzsche’s genealogy of morals: masters and slaves, resentment and the revaluation of values; in Year 2 you will read him in depth alongside Marx and Freud, with his PAU text, Ecce homo." },
+      { k: "hf-utilitarismo", n: 17, tit: "Utilitarianism and liberalism: the foundations of capitalism", txt: "In Year 1 you saw the utilitarianism of Bentham and Mill as an ethics: the greatest happiness for the greatest number and the higher pleasures; in Year 2 you will see it as a basis of liberalism, with Mill’s harm principle and Adam Smith’s market." }
     ],
     "fil-t6": [
       { k: "hf-contrato", n: 16, tit: "The origin of society and power: Machiavelli and the social contract", txt: "In Year 1 you saw the social contract of Hobbes, Locke and Rousseau as the origin of the State; in Year 2 you will also read Machiavelli and Montesquieu’s idea of limiting power." },
-      { k: "hf-utilitarismo", n: 17, tit: "Utilitarianism and liberalism: the foundations of capitalism", txt: "In Year 1 you saw Locke’s political liberalism and the social contract; in Year 2 you will see the foundations of economic liberalism: the utilitarianism of Bentham and Mill and Adam Smith’s market." },
       { k: "hf-capitalismo", n: 22, tit: "The critique of capitalism: from Marx to Rawls", txt: "In Year 1 you saw Marx’s critique of capitalism: class struggle, surplus value and alienation; in Year 2 you will read how it continues in Gramsci, the Frankfurt School, Habermas and Rawls." },
       { k: "hf-beauvoir", n: 26, tit: "Contemporary feminism: Simone de Beauvoir", txt: "In Year 1 you saw Beauvoir in the waves of feminism and her ‘One is not born, but rather becomes, a woman’; in Year 2 you will read her existentialism in depth, and Butler, Fraser and Nussbaum." },
-      { k: "hf-platon", n: 6, tit: "Plato: the theory of Ideas and the Republic", txt: "In Year 1 you saw Plato’s Republic as the first great utopia, the just city of the philosopher-kings; in Year 2 you will read it in depth, together with his theory of the soul and of the Ideas." },
-      { k: "hf-politica", n: 9, tit: "Classical politics: Plato and Aristotle", txt: "In Year 1 you saw Aristotle define the human being as a political animal and the just city of the Republic; in Year 2 you will compare in depth the two great political models of Plato and Aristotle." },
+      { k: "hf-politica", n: 9, tit: "Classical politics: Plato and Aristotle", txt: "En 1.º viste la República de Platón como la primera gran utopía, la ciudad justa de los filósofos-reyes, y a Aristóteles definir al ser humano como animal político; en 2.º leerás la República a fondo (tema 6) y compararás los dos modelos políticos de Platón y Aristóteles." },
       { k: "hf-ilustracion", n: 18, tit: "The Enlightenment project: the power and limits of reason", txt: "In Year 1 you saw human rights, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; in Year 2 you will see the Enlightenment project from which those rights and that critique arise: confidence in reason and its limits." }
+    ],
+    "hf-aa": [
+      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw substance, essence and the passage from potentiality to actuality; here you have studied Aristotle’s complete system: the categories, the four causes and teleology." }
+    ],
+    "hf-analitica": [
+      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "In Year 1 you already saw the symbolic logic of Frege and Russell; here you have seen how that logical analysis of language gives rise to the linguistic turn of Russell and Wittgenstein." }
+    ],
+    "hf-existencialismo": [
+      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the existentialism of Sartre and Beauvoir: ‘existence precedes essence’; here you have studied it with Kierkegaard, Heidegger and Camus." },
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Ortega y Gasset’s perspectivism: ‘I am myself and my circumstance’; here you have read it alongside the existentialists, with Unamuno and María Zambrano." }
     ],
     "hf-antropologia": [
       { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the soul in the mind-body problem, with Plato’s dualism and Aristotle’s soul-as-form; here you have read about the turn of Socrates and the three conceptions of the psyche." }
@@ -421,14 +444,14 @@
       { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw rationalism and empiricism in the table of sources of knowledge; here you have read Descartes and Hume from the inside: doubt, the cogito and the critique of causality." }
     ],
     "hf-sofistas": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; here you have placed it in its world: the Greek Enlightenment and the Sophists’ turn towards the human being and the polis." },
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Socrates’ moral intellectualism, for whom no one does wrong knowingly; here you have met the Socrates who defended it, against the Sophists, in democratic Athens." }
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; here you have placed it in its world: the Greek Enlightenment and the Sophists’ turn towards the human being and the polis." }
     ],
     "hf-sospecha": [
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; here you have read them together as the masters of suspicion." }
+      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; here you have read them together as the masters of suspicion." },
+      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Nietzsche’s genealogy of morals: masters and slaves, resentment and the revaluation of values; here you have read him in depth, with his PAU text." }
     ],
     "hf-utilitarismo": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Locke’s political liberalism and the social contract; here you have read the foundations of economic liberalism: the utilitarianism of Bentham and Mill and Adam Smith’s market." }
+      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw the utilitarianism of Bentham and Mill as an ethics: the greatest happiness for the greatest number and the higher pleasures; here you have read it as a basis of liberalism, with Mill’s harm principle and Adam Smith’s market." }
     ]
   };
   var WEB_REPO = { fil: "aula-de-filosofia-web", hf: "historia-filosofia-web" };
@@ -472,7 +495,7 @@
     P.cronogramas = row(t("cronogramas"), cronosDe(subject, tema));
     P.disertaciones = row(t("disertaciones"), disertDe(subject, tema));
     P.comparativas = row(t("comparativas"), comparativasDe(subject, tema));
-    P.logica = row(t("logica"), logicaDe(subject, tema));
+    P.logica = row(t("logica"), logicaDe(subject, tema, key));
     P.polemicas = rowFold(t("polemicas"), pols);
     P.comunidades = rowFold(t("comunidades"), porTemas("COMUNIDADES", "comunidades", tk, function(c){ return strip(c.nombre); }));
     P.perseguidos = rowFold(t("perseguidos"), porTemas("PERSEGUIDOS", "perseguidos", tk, function(c){ return strip(c.nombre); }));
@@ -481,7 +504,7 @@
     /* (12-10, rediseño Lote 3) la caja del final del tema se ordena en TRES bloques en TODOS los temas */
     var blk = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<div class="fin-bloque"><h3>' + esc(titulo) + '</h3>' + inner + '</div>' : ""; };
     var amp = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<details class="fin-bloque fin-amp"><summary>' + esc(titulo) + '</summary>' + inner + '</details>' : ""; };
-    var ampComun = [P.anexos].concat(subject === "hf" ? [P.dilemas, P.pistas] : []).concat([P.polemicas, P.comunidades, P.perseguidos, P.duelo, P.juegos, P.videos]);
+    var ampComun = [P.anexos].concat(subject === "hf" ? [P.dilemas, P.pistas, P.logica] : [])   /* (22-10) en HF, la lógica va en «Ampliar» */.concat([P.polemicas, P.comunidades, P.perseguidos, P.duelo, P.juegos, P.videos]);
     var rowsHtml = puentesHtml(subject, key) + blk(t("blEstudiar"), [P.tarjetas, P.cuestionarios, P.infografias, P.mapas, P.esquemas, P.conceptos, P.epoca, P.cronogramas]) +
       (subject === "hf" ? blk(t("blPau"), [P.lecturas, P.comentario, P.disertaciones, P.comparativas]) : blk(t("blPensar"), [P.lecturas, P.disertaciones, P.dilemas, P.pistas, P.logica])) +
       amp(t("blAmpliar"), ampComun);
