@@ -1,7 +1,7 @@
 // Generado por web_i18n/i18n_rebuild.js (en) a partir de web/js/juegosucio.js. No editar a mano: editar la memoria tm/en.json y regenerar.
 const JUEGO_SUCIO = {
  "intro": "Arthur Schopenhauer (1788-1860) was a German philosopher with a reputation for being grumpy: just look at his hair. Around 1830 he wrote a little book, <em>The Art of Being Right</em>, with 38 ‘stratagems’: tricks for winning an argument even when you are in the wrong. He did not write it so that we would cheat: he said you have to know them so that they are not used on you. Here are 25.",
- "pista": "The illustrations are caricatures and old paintings in the public domain, mostly by Honoré Daumier, who mocked the lawyers of his day: many of his drawings are, quite literally, Schopenhauer’s stratagems. Always notice what someone who cheats is after: they do not want to know who is right, they want to win.",
+ "pista": "The illustrations are caricatures and old paintings in the public domain, mostly by Honoré Daumier, who mocked the lawyers of his day. In many of them, the joke is in what the characters say: read the caption. Always notice what someone who cheats is after: they do not want to know who is right, they want to win.",
  "retrato": "Arthur Schopenhauer, photographed by Johann Schäfer in 1859.",
  "estratagemas": [
   {
@@ -116,7 +116,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1200,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 9 (1845-1848).",
-   "pie": "‘—You insulted me in your plea, but I shall know how to make you explain yourself!… —Know, sir, that I do not fear you…’ Two lawyers have taken offence: they are no longer arguing the case, they are arguing with each other.",
+   "pie": "‘—You insulted me in your plea, but I shall know how to make you explain yourself!… —Know, sir, that I do not fear you… and that I have the civic courage never to respond to a provocation!’ A man from the street puts his finger under the lawyer’s chin to needle him. The lawyer does not take the bait: that is how you stop this stratagem.",
    "defensa": "Breathe and go back to the subject: your getting angry does not make what the other person says true."
   },
   {
@@ -300,7 +300,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 796,
    "obra": "William Hogarth, <em>A Rake’s Progress</em>, plate 4 (1735).",
-   "pie": "In eight engravings, Hogarth told the fall of a young man who inherits a fortune: parties, debts, prison and madhouse. In this plate he is arrested for debt. The slippery slope tells any first step in this way: as if it led inevitably to the last.",
+   "pie": "In eight engravings, Hogarth told the fall of a young man who inherits a fortune: parties, debts, prison and madhouse. This is the fourth plate: he is arrested for debt (on the right, next to the sedan chair). The slippery slope tells any first step in this way: as if it led inevitably to the last.",
    "defensa": "Ask about each step: ‘Why would that have to happen?’"
   },
   {
@@ -369,7 +369,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1006,
    "obra": "William Hogarth, <em>The Laughing Audience</em> (1733). National Gallery of Art, Washington.",
-   "pie": "The audience at a theatre is doubled up with laughter; only the orchestra musicians, in front, remain serious. When people laugh, it seems the joke has won the argument.",
+   "pie": "The audience at a theatre is doubled up with laughter; only the orchestra musicians, in the bottom row, remain serious. When people laugh, it seems the joke has won the argument.",
    "defensa": "Wait for the laughter to pass and go back to your argument: a joke is not a reason."
   },
   {
@@ -392,7 +392,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 683,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 30 (1845-1848).",
-   "pie": "‘The lawyer who faints: the last resort when the case is very sick.’ If everybody looks at the person who has fainted, nobody looks at the evidence.",
+   "pie": "‘The lawyer who faints: the last resort when the case is very sick.’ Everybody crowds round the person who has fainted, so much that you cannot even see him. If everybody looks at the person who has fainted, nobody looks at the evidence.",
    "defensa": "‘We’ll talk about that later. Right now we were talking about…’"
   },
   {
@@ -457,11 +457,6 @@ const JUEGO_SUCIO = {
      "t": "That’s for grandparents!"
     }
    ],
-   "img": "media/juegosucio/etiqueta.jpg",
-   "w": 900,
-   "h": 1100,
-   "obra": "Honoré Daumier, <em>Les Bas-bleus</em> (1844).",
-   "pie": "‘<em>Bas-bleu</em>’ (‘bluestocking’) was the label used to ridicule women who wrote, and Daumier devoted a whole series to it. With a label like that, there is no longer any need to listen to what someone says.",
    "defensa": "A label is not a reason: ‘And what’s wrong with that?’"
   },
   {
@@ -484,7 +479,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1114,
    "obra": "Honoré Daumier, <em>Fruitless Search for the Planet Leverrier</em> (1846). National Gallery of Art, Washington.",
-   "pie": "In 1846, the astronomer Le Verrier calculated on paper where a new planet, Neptune, had to be, and it was found at once. This couple cannot see it with their telescope: in theory it is there, but in practice, nothing.",
+   "pie": "In 1846, the astronomer Le Verrier calculated on paper where a new planet, Neptune, had to be, and with a telescope it was found at once. This couple look for it with the naked eye, umbrella in hand, and see nothing: ‘in theory it is there, but in practice, nothing’. The theory was right; what failed was their way of looking.",
    "defensa": "Ask what exactly fails in practice: either there is a specific flaw, or it is an excuse."
   },
   {
