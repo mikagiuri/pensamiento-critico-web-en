@@ -20,7 +20,7 @@ const PIS_TXT = {
   comprobacion: "Check", pregunta: "Question", logrado: "Understanding achieved", completado: "Itinerary completed",
   sinAyuda: "You solved it without hints.", usaste: "Hints used: {n}.", repetir: "Go through it again", siguiente: "Next question:",
   pisN: "Hint {n}", revelar: "Click to reveal", preguntas: "Questions",
-  enGlosario: "In the glossary", abrirGlo: "Open in the glossary ›",
+  enGlosario: "In the dictionary", abrirGlo: "Open in the dictionary ›",
   seguir: "Try again",
   intentoLb: "Before you see the explanation", intentoTxt: "Write your answer in your own words, even if you are not sure. Then you will compare it with the explanation.",
   intentoGuarda: "What you write is saved only in this browser.", intentoPal: "{n} words (minimum {m})", intentoVer: "See the explanation and compare",

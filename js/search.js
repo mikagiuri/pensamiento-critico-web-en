@@ -49,7 +49,7 @@
     esquemas: "loadEsq", pau: "loadPau", mapas: "loadMap"
   };
   /* orden de los grupos en los resultados */
-  var ORDER = ["Section", "Theory", "Section", "Glossary", "Reading", "Passage", "Quotation", "Question", "Card", "Outline", "Material", "Story", "Infographic", "Quiz", "Cards", "PAU", "Biography", "Clase"];
+  var ORDER = ["Section", "Theory", "Section", "Dictionary", "Reading", "Passage", "Quotation", "Question", "Card", "Outline", "Material", "Story", "Infographic", "Quiz", "Cards", "PAU", "Biography", "Clase"];
 
   var index = null;
   /* entrada: { type, label, meta, go, arg, text (fragmento original donde buscar), hay (fold de label+meta+clave),
@@ -125,7 +125,7 @@
     });
     /* glosario: término + definición (+ raíz) */
     if (typeof GLOSARIO !== "undefined" && GLOSARIO) GLOSARIO.forEach(function(g){
-      add(out, { type: "Glossary", label: g.t, meta: (g.area || "") + (g.tema ? " · " + g.tema : ""), go: "glosario", arg: null, glo: g, text: strip((g.def || "") + (g.et ? " · " + g.et : "")) });
+      add(out, { type: "Dictionary", label: g.t, meta: (g.area || "") + (g.tema ? " · " + g.tema : ""), go: "glosario", arg: null, glo: g, text: strip((g.def || "") + (g.et ? " · " + g.et : "")) });
     });
     /* lecturas: por párrafo (o bloque), agrupando los muy cortos */
     if (LE) Object.keys(LE).forEach(function(k){
@@ -188,7 +188,7 @@
       else if (e.hay.indexOf(nq) >= 0) score -= 30;
       else if (e.body.indexOf(nq) >= 0) score -= 20;   /* la frase entera, en el texto */
       if (e.type === "Section") score -= 5;
-      if (e.type === "Glossary") score -= 10;
+      if (e.type === "Dictionary") score -= 10;
       score += Math.min(10, Math.floor((e.text || "").length / 400));   /* a igualdad, el fragmento corto */
       res.push({ e: e, score: score });
     });
@@ -264,7 +264,7 @@
     ov.innerHTML =
       '<div class="search-box">' +
         '<input id="searchinput" type="search" autocomplete="off" spellcheck="false" ' +
-          'placeholder="Search the whole classroom: theory, glossary, readings, questions, quotations…" aria-label="Search the classroom">' +
+          'placeholder="Search the whole classroom: theory, dictionary, readings, questions, quotations…" aria-label="Search the classroom">' +
         '<div class="search-count" id="searchcount"></div>' +
         '<ul id="searchresults" class="search-res" role="listbox" aria-label="Results"></ul>' +
         '<div class="search-hint">↑↓ move · ↵ open · esc close</div>' +
