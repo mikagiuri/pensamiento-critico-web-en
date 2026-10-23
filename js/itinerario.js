@@ -383,7 +383,9 @@
       { k: "hf-existencialismo", n: 25, tit: "Existentialism: Heidegger, Sartre and Spanish philosophy", txt: "In Year 1 you saw Ortega y Gasset’s perspectivism: ‘I am myself and my circumstance’; in Year 2 you will see it alongside the existentialists, with Unamuno and María Zambrano." }
     ],
     "fil-t4": [
-      { k: "hf-analitica", n: 24, tit: "Analytic philosophy: Wittgenstein and the linguistic turn", txt: "In Year 1 you saw the symbolic logic of Frege and Russell, which translates language into formulas; in Year 2 you will see how Russell and the early Wittgenstein use that logical analysis in search of a perfect language: this is the linguistic turn of analytic philosophy." }
+      { k: "hf-aa", n: "AA", tit: "Aristotle: the complete system", txt: "En 1.º viste los silogismos y el cuadrado de oposición (en el Rincón de lógica); en 2.º verás la lógica dentro del sistema de Aristóteles: el Órganon, la clasificación de las ciencias, las categorías y cómo la teoría del silogismo se enlaza con su metafísica." },
+      { k: "hf-racionalismo", n: 14, tit: "Rationalism and empiricism: Descartes and Hume", txt: "En 1.º viste el álgebra de Boole, que convierte la lógica en un cálculo con 1 y 0; en 2.º verás la mathesis universalis de Descartes, su sueño de una ciencia universal del orden. Leibniz, que en ese tema aparece con las mónadas, lo llevó más lejos: imaginó una lengua en la que razonar fuera calcular." },
+      { k: "hf-analitica", n: 24, tit: "Analytic philosophy: Wittgenstein and the linguistic turn", txt: "En 1.º viste la lógica de las conectivas y sus tablas de verdad, los cuantificadores y la lógica simbólica de Frege y de Russell; en 2.º verás cómo Russell y el primer Wittgenstein usan ese análisis lógico del lenguaje para buscar un lenguaje perfecto: es el giro lingüístico de la filosofía analítica." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "Classical ethics: intellectualism, virtues and eudaimonia", txt: "In Year 1 you saw virtue as a mean and the intellectualism of Socrates; in Year 2 you will read the whole of classical ethics: areté, eudaimonía and the answers of Socrates, Plato and Aristotle." },
@@ -400,7 +402,8 @@
       { k: "hf-ilustracion", n: 18, tit: "The Enlightenment project: the power and limits of reason", txt: "In Year 1 you saw human rights, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; in Year 2 you will see the Enlightenment project from which those rights and that critique arise: confidence in reason and its limits." }
     ],
     "hf-aa": [
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw substance, essence and the passage from potentiality to actuality; here you have studied Aristotle’s complete system: the categories, the four causes and teleology." }
+      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw substance, essence and the passage from potentiality to actuality; here you have studied Aristotle’s complete system: the categories, the four causes and teleology." },
+      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "Ya viste en 1.º los silogismos y el cuadrado de oposición (en el Rincón de lógica); aquí has visto esa lógica dentro del sistema de Aristóteles: el Órganon, la clasificación de las ciencias, las categorías y la teoría del silogismo ligada a su metafísica." }
     ],
     "hf-analitica": [
       { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "In Year 1 you already saw the symbolic logic of Frege and Russell; here you have seen how that logical analysis of language gives rise to the linguistic turn of Russell and Wittgenstein." }
@@ -463,7 +466,8 @@
       { k: "fil-t1", n: 1, tit: "What is philosophy?", txt: "In Year 1 you already saw Thales’s arché as the first step of logos; here you have gone through the Presocratics’ answers to the question of reality and of the principle of everything." }
     ],
     "hf-racionalismo": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw rationalism and empiricism in the table of sources of knowledge; here you have read Descartes and Hume from the inside: doubt, the cogito and the critique of causality." }
+      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw rationalism and empiricism in the table of sources of knowledge; here you have read Descartes and Hume from the inside: doubt, the cogito and the critique of causality." },
+      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "Ya viste en 1.º el álgebra de Boole y la lógica binaria (1 y 0); aquí has visto la mathesis universalis de Descartes, el sueño de una ciencia universal del orden. Leibniz, que en este tema aparece con las mónadas, lo llevó más lejos: una lengua en la que razonar fuera calcular." }
     ],
     "hf-sofistas": [
       { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; here you have placed it in its world: the Greek Enlightenment and the Sophists’ turn towards the human being and the polis." }
