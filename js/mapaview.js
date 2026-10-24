@@ -4,7 +4,7 @@
    Se construye al cargar a partir del menú (#tabs) tal como lo deja cada build, así que cada web publicada
    (Filosofía 1.º, HF, ESO, y sus traducciones) muestra solo sus secciones, en el orden del menú, con una línea
    de qué hay en cada una y, cuando se puede contar, cuántos elementos tiene. Debajo, los temas de cada materia
-   con sus exploraciones (de Itinerario.temasDe) y, dentro de Ilustres, las fichas de época.
+   con sus exploraciones (de Itinerario.temasDe) y, dentro de Biografías, las fichas de época.
    Los textos van en MAPA_TXT y MAPA_DESC (se traducen con el diccionario de interfaz ui/<lang>.json). */
 const MAPA_TXT = {
   secciones: "Sections", temas: "Topics in each subject", tema: "Topic {n}", exploraciones: "Explorations",
@@ -24,9 +24,9 @@ const MAPA_DESC = {
   materiales: "Worksheets, activities and documents to download.",
   cuentos: "Stories to think with, with their questions.",
   tarjetas: "Revision cards: question on the front, answer on the back.",
-  reto: "Questions against the clock to revise while you play.",
+  retos: "Questions against the clock to revise while you play.",
   parejas: "Memory game: match each concept with its pair.",
-  glosario: "The concepts of each topic, with their definition and origin.",
+  diccionario: "The concepts of each topic, with their definition and origin.",
   biografias: "Biographies of the thinkers and period profiles.",
   citas: "Famous sayings of the philosophers, explained.",
   adagios: "Classical Latin and Greek adages, and famous quotations from philosophers: what they mean and when to use them.",
@@ -53,17 +53,17 @@ const MAPA_DESC = {
   cronogramas: "Timelines of authors and periods.",
   genealogias: "Who influenced whom: masters, disciples and rivals.",
   esquemas: "Outlines of the main ideas of each topic.",
-  esqautor: "One summary per author, for the PAU.",
+  resumenes: "One summary per author, for the PAU.",
   diapositivas: "Presentations of the topics.",
   rescritura: "Learn to rewrite a text in your own words.",
   pistas: "Problems with hints that open up little by little.",
   cuestionarios: "Multiple-choice questions for each topic, with marking.",
-  juegosucio: "The dirty tricks of arguing, so you can spot them.",
+  logica_pca: "The dirty tricks of arguing, so you can spot them.",
   unidad: "All the questions from a unit, together.",
   rubricas: "How assignments and exams are marked.",
   evidencias: "Evidence of learning from last year.",
   recursos: "External links and tools.",
-  pau: "What the university entrance exam is like.",
+  prepara_PAU: "What the university entrance exam is like.",
   comentario: "How to write a text commentary, with worked examples.",
   disertaciones: "How to write an essay, with models.",
   lecturas: "The authors’ texts to read and comment on.",
@@ -71,7 +71,7 @@ const MAPA_DESC = {
   signos: "Sign language course."
 };
 /* cuántos elementos tiene cada sección (si su colección está cargada en esta web) */
-const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", biografias: "BIOGRAFIAS", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
+const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", diccionario: "DICCIONARIO", biografias: "BIOGRAFIAS", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
   infografias: "INFOGRAFIAS", mapas: "MAPS", esquemas: "ESQUEMAS", cronogramas: "CRONOGRAMAS", genealogias: "GENEALOGIAS", lecturas: "LECTURAS",
   galeria: "GALERIA", dilemas: "DILEMAS", disertaciones: "DISERTACIONES", nudos: "NUDOS", pistas: "PISTAS", materiales: "MATERIALS" };
 function mapaG(name){ try { return (0, eval)("typeof " + name + " !== 'undefined' ? " + name + " : undefined"); } catch (e){ return undefined; } }

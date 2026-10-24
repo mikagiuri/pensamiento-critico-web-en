@@ -1,4 +1,4 @@
-// Generado por web_i18n/i18n_rebuild.js (en) a partir de web/js/juegosucio.js. No editar a mano: editar la memoria tm/en.json y regenerar.
+// Generado por web_i18n/i18n_rebuild.js (en) a partir de web/js/logica_pca.js. No editar a mano: editar la memoria tm/en.json y regenerar.
 const JUEGO_SUCIO = {
  "intro": "Arthur Schopenhauer (1788-1860) was a German philosopher with a reputation for being grumpy: just look at his hair. Around 1830 he wrote a little book, <em>The Art of Being Right</em>, with 38 ‘stratagems’: tricks for winning an argument even when you are in the wrong. He did not write it so that we would cheat: he said you have to know them so that they are not used on you. Here are 25.",
  "pista": "The illustrations are caricatures and old paintings in the public domain, mostly by Honoré Daumier, who mocked the lawyers of his day. In many of them, the joke is in what the characters say: read the caption. Always notice what someone who cheats is after: they do not want to know who is right, they want to win.",
@@ -20,7 +20,7 @@ const JUEGO_SUCIO = {
      "t": "Of course, you want us never to study!"
     }
    ],
-   "img": "media/juegosucio/exagerar.jpg",
+   "img": "media/logica_pca/exagerar.jpg",
    "w": 900,
    "h": 1567,
    "obra": "Francisco de Goya, <em>The Straw Manikin</em> (1791-1792). Prado Museum.",
@@ -43,7 +43,7 @@ const JUEGO_SUCIO = {
      "t": "Clever? She’s still getting dressed!"
     }
    ],
-   "img": "media/juegosucio/palabras.jpg",
+   "img": "media/logica_pca/palabras.jpg",
    "w": 900,
    "h": 1145,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 20 (1845-1848).",
@@ -66,7 +66,7 @@ const JUEGO_SUCIO = {
      "t": "Oh, really? So we should keep our phones in exams?"
     }
    ],
-   "img": "media/juegosucio/relativo.jpg",
+   "img": "media/logica_pca/relativo.jpg",
    "w": 900,
    "h": 721,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 15 (1845-1848).",
@@ -89,7 +89,7 @@ const JUEGO_SUCIO = {
      "t": "Because everything it publishes is true."
     }
    ],
-   "img": "media/juegosucio/circulo.jpg",
+   "img": "media/logica_pca/circulo.jpg",
    "w": 900,
    "h": 1185,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 12 (1845-1848).",
@@ -112,7 +112,7 @@ const JUEGO_SUCIO = {
      "t": "I’m not bothered, it’s just that…!"
     }
    ],
-   "img": "media/juegosucio/enfadar.jpg",
+   "img": "media/logica_pca/enfadar.jpg",
    "w": 900,
    "h": 1200,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 9 (1845-1848).",
@@ -135,7 +135,7 @@ const JUEGO_SUCIO = {
      "t": "On the basis of two people?"
     }
    ],
-   "img": "media/juegosucio/generalizar.jpg",
+   "img": "media/logica_pca/generalizar.jpg",
    "w": 900,
    "h": 626,
    "obra": "John James Audubon, <em>Trumpeter Swan</em>, plate 406 of <em>The Birds of America</em> (1838).",
@@ -158,7 +158,7 @@ const JUEGO_SUCIO = {
      "t": "I didn’t copy: I drew inspiration from your work."
     }
    ],
-   "img": "media/juegosucio/eufemismo.jpg",
+   "img": "media/logica_pca/eufemismo.jpg",
    "w": 900,
    "h": 707,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 11 (1845-1848).",
@@ -181,7 +181,7 @@ const JUEGO_SUCIO = {
      "t": "And isn’t there a third door?"
     }
    ],
-   "img": "media/juegosucio/dosopciones.jpg",
+   "img": "media/logica_pca/dosopciones.jpg",
    "w": 900,
    "h": 762,
    "obra": "James Gillray, <em>Britannia between Scylla and Charybdis</em> (1793). Library of Congress, Washington.",
@@ -204,7 +204,7 @@ const JUEGO_SUCIO = {
      "t": "But you haven’t proved anything…"
     }
    ],
-   "img": "media/juegosucio/victoria.jpg",
+   "img": "media/logica_pca/victoria.jpg",
    "w": 900,
    "h": 1209,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 35 (1845-1848).",
@@ -227,7 +227,7 @@ const JUEGO_SUCIO = {
      "t": "Well, you dropped some the other day too!"
     }
    ],
-   "img": "media/juegosucio/tutambien.jpg",
+   "img": "media/logica_pca/tutambien.jpg",
    "w": 900,
    "h": 727,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 14 (1845-1848).",
@@ -250,7 +250,7 @@ const JUEGO_SUCIO = {
      "t": "That wasn’t copying: it was comparing answers."
     }
    ],
-   "img": "media/juegosucio/distincion.jpg",
+   "img": "media/logica_pca/distincion.jpg",
    "w": 900,
    "h": 1213,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 19 (1845-1848).",
@@ -273,7 +273,7 @@ const JUEGO_SUCIO = {
      "t": "Look, the economy is a complex system in which everything influences everything."
     }
    ],
-   "img": "media/juegosucio/general.jpg",
+   "img": "media/logica_pca/general.jpg",
    "w": 900,
    "h": 712,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 33 (1845-1848).",
@@ -296,7 +296,7 @@ const JUEGO_SUCIO = {
      "t": "Ten today, twelve tomorrow… and within a month you’ll be living on the street!"
     }
    ],
-   "img": "media/juegosucio/pendiente.jpg",
+   "img": "media/logica_pca/pendiente.jpg",
    "w": 900,
    "h": 796,
    "obra": "William Hogarth, <em>A Rake’s Progress</em>, plate 4 (1735).",
@@ -319,7 +319,7 @@ const JUEGO_SUCIO = {
      "t": "Well, in Australia there are black ones."
     }
    ],
-   "img": "media/juegosucio/contraejemplo.jpg",
+   "img": "media/logica_pca/contraejemplo.jpg",
    "w": 900,
    "h": 1204,
    "obra": "John Gerrard Keulemans, <em>Black Swan</em> (1869).",
@@ -342,7 +342,7 @@ const JUEGO_SUCIO = {
      "t": "Precisely because he’s little he must be corrected, so that he doesn’t pick up bad habits."
     }
    ],
-   "img": "media/juegosucio/vuelta.jpg",
+   "img": "media/logica_pca/vuelta.jpg",
    "w": 900,
    "h": 1143,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 22 (1845-1848).",
@@ -365,7 +365,7 @@ const JUEGO_SUCIO = {
      "t": "Ha! So now you’re going to marry a bee?"
     }
    ],
-   "img": "media/juegosucio/publico.jpg",
+   "img": "media/logica_pca/publico.jpg",
    "w": 900,
    "h": 1006,
    "obra": "William Hogarth, <em>The Laughing Audience</em> (1733). National Gallery of Art, Washington.",
@@ -388,7 +388,7 @@ const JUEGO_SUCIO = {
      "t": "And did you all see what trainers the teacher’s wearing today?"
     }
    ],
-   "img": "media/juegosucio/cambiartema.jpg",
+   "img": "media/logica_pca/cambiartema.jpg",
    "w": 900,
    "h": 683,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 30 (1845-1848).",
@@ -411,7 +411,7 @@ const JUEGO_SUCIO = {
      "t": "A footballer with three million followers says so!"
     }
    ],
-   "img": "media/juegosucio/autoridad.jpg",
+   "img": "media/logica_pca/autoridad.jpg",
    "w": 900,
    "h": 1258,
    "obra": "Francisco de Goya, <em>Capricho 37: Might the pupil know more?</em> (1799). Prado Museum.",
@@ -434,7 +434,7 @@ const JUEGO_SUCIO = {
      "t": "Oh, that’s too deep for me: I don’t understand it."
     }
    ],
-   "img": "media/juegosucio/ironia.jpg",
+   "img": "media/logica_pca/ironia.jpg",
    "w": 900,
    "h": 1233,
    "obra": "Francisco de Goya, <em>Capricho 50: The Chinchillas</em> (1799). Prado Museum.",
@@ -475,7 +475,7 @@ const JUEGO_SUCIO = {
      "t": "That’s all very well in theory, but in practice it doesn’t work."
     }
    ],
-   "img": "media/juegosucio/teoria.jpg",
+   "img": "media/logica_pca/teoria.jpg",
    "w": 900,
    "h": 1114,
    "obra": "Honoré Daumier, <em>Fruitless Search for the Planet Leverrier</em> (1846). National Gallery of Art, Washington.",
@@ -498,7 +498,7 @@ const JUEGO_SUCIO = {
      "t": "Right, and who will take the photos for your social media?"
     }
    ],
-   "img": "media/juegosucio/interes.jpg",
+   "img": "media/logica_pca/interes.jpg",
    "w": 900,
    "h": 731,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 6 (1845-1848).",
@@ -521,7 +521,7 @@ const JUEGO_SUCIO = {
      "t": "And what does that mean?"
     }
    ],
-   "img": "media/juegosucio/palabreria.jpg",
+   "img": "media/logica_pca/palabreria.jpg",
    "w": 900,
    "h": 1276,
    "obra": "Francisco de Goya, <em>Capricho 53: What a Golden Beak!</em> (1799). Prado Museum.",
@@ -544,7 +544,7 @@ const JUEGO_SUCIO = {
      "t": "Your grandmother isn’t a doctor! So smoking isn’t bad."
     }
    ],
-   "img": "media/juegosucio/pruebamala.jpg",
+   "img": "media/logica_pca/pruebamala.jpg",
    "w": 900,
    "h": 750,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 17 (1845-1848).",
@@ -567,7 +567,7 @@ const JUEGO_SUCIO = {
      "t": "And what would you know, you failed maths!"
     }
    ],
-   "img": "media/juegosucio/insultar.jpg",
+   "img": "media/logica_pca/insultar.jpg",
    "w": 900,
    "h": 1196,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, plate 32 (1845-1848).",
