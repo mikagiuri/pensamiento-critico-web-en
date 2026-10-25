@@ -358,139 +358,265 @@
   }
   /* (19-10) puentes 1.º <-> 2.º (informe fil1->hf2 §5.2; borrador de DSH, visto bueno de la 50). Muestra aprobada por el profesor; extendido a todos los temas del mapa (borrador 3 de DSH).
      En la web completa el enlace abre el tema; en las webs del alumnado, la otra web publicada en la misma lengua. */
+  /* (25-10) remapeo de los puentes sobre la teoría nueva de 1.º (los 94 de la opción A, aprobada por el profesor): borrador de Ollama revisable; textos en ui/<lang>.json. Ver 1_vivo/encargos/puentes_remapeo_2026-10-25 */
   var PUENTES = {
-    "fil-metafisica": [
-      { k: "hf-medieval", n: 11, tit: "Medieval philosophy: stages, methods and the problem of universals", txt: "In Year 1 you saw the problem of universals — realism, conceptualism and nominalism — and the arguments about God of Anselm and Aquinas; in Year 2 you will see the whole Middle Ages: the relation between faith and reason, its stages and the medieval dispute over universals." },
-      { k: "hf-fe-razon", n: 12, tit: "Faith and reason: the assimilation of Greek philosophy and the existence of God", txt: "In Year 1 you saw Aquinas’s five ways and the distinction between essence and existence; in Year 2 you will see how Christianity assimilated Greek philosophy, with Augustine, Aquinas, Avicenna and Ockham." },
-      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw monism, dualism and materialism as answers about substance; in Year 2 you will see that debate in the modern age, with Descartes, Hobbes, Spinoza and Locke." },
-      { k: "hf-aa", n: "AA", tit: "Aristotle: the complete system", txt: "In Year 1 you saw Aristotle’s substance, essence, the move from potency to act and his moderate realism about universals; in Year 2 you will see his complete system: the categories, the four causes and teleology." },
-      { k: "hf-siglo21", n: 27, tit: "Today’s society: challenges of the 21st century", txt: "In Year 1 you saw artificial intelligence as an object of study: what it is, the difference between narrow and general AI, the singularity and its risks; in Year 2 you will see it among the challenges of the 21st century: data, algorithms and democratic governance." }
-    ],
     "fil-t1": [
-      { k: "hf-mito", n: 3, tit: "The emergence of philosophy: from myth to logos", txt: "In Year 1 you saw the move from myth to logos and asked whether philosophy was born only in Greece, with Chinese Mohism and the African debate; in Year 2 you will read the first philosophers of Miletus and discuss the ‘Greek miracle’: what was new about it and what it inherited." },
-      { k: "hf-preso", n: 4, tit: "The problem of reality in the Presocratics", txt: "In Year 1 you saw Thales of Miletus seek the arché as a first principle; in Year 2 you will see why each Presocratic proposed a different one and how they understood reality." }
+      {"k":"hf-historicidad","n":1,"tit":"Historicity and universality of philosophy","txt":"In Year 1 you saw that philosophy is a form of knowledge that asks about general questions."},
+      {"k":"hf-mito","n":3,"tit":"The emergence of philosophy: from myth to logos","txt":"In Year 1 you saw that philosophy is born as the passage from myth to logos."},
+      {"k":"hf-preso","n":4,"tit":"The problem of reality in the Presocratics","txt":"In Year 1 you saw that the first philosophers sought rational explanations of nature."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you saw that there are different types of knowledge and that not all of them have the same value."},
+      {"k":"hf-metodos","n":2,"tit":"The methods of philosophy","txt":"In Year 1 you saw that philosophical knowledge is rational, critical and argued."},
+      {"k":"hf-ilustracion","n":18,"tit":"The Enlightenment project: the power and limits of reason","txt":"In Year 1 you saw that philosophy rejects dogmatism and examines beliefs."},
+      {"k":"hf-kant","n":19,"tit":"Kant’s critical philosophy and the problem of metaphysics","txt":"In Year 1 you saw that philosophy is divided into branches according to its questions."},
+      {"k":"hf-metafisica","n":15,"tit":"The modern metaphysical debate: dualism and materialism","txt":"In Year 1 you saw that metaphysics studies reality and being."},
+      {"k":"hf-etica-deber","n":20,"tit":"Ethics of happiness and ethics of duty: Kant versus utilitarianism","txt":"In Year 1 you saw that ethics is a practical branch of philosophy."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw that philosophy dialogues with science and deals with its foundations."},
+      {"k":"hf-modernidad","n":13,"tit":"The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution","txt":"In Year 1 you saw that science studies verifiable fields and philosophy asks about foundations."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you saw that philosophy fulfils critical, orientating and analytical functions."}
     ],
-    "fil-t2": [
-      { k: "hf-antropologia", n: 7, tit: "Classical anthropology: Socrates, Plato and Aristotle", txt: "In Year 1 you saw the soul in the mind-body problem, with Plato and Aristotle; in Year 2 you will read about the turn of Socrates and the three conceptions of the psyche: soul, virtue and the good life." },
-      { k: "hf-metafisica", n: 15, tit: "The modern metaphysical debate: dualism and materialism", txt: "In Year 1 you saw Descartes’s dualism and Hobbes’s materialism; in Year 2 you will see that modern debate in full, with Spinoza’s monism and Locke’s empiricist turn." },
-      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; in Year 2 you will see them together as the ‘masters of suspicion’, who throw into crisis the idea of a subject that is master of itself." },
-      { k: "hf-existencialismo", n: 25, tit: "Existentialism: Heidegger, Sartre and Spanish philosophy", txt: "In Year 1 you saw the existentialism of Sartre and Beauvoir: ‘existence precedes essence’; in Year 2 you will study it with Kierkegaard, Heidegger and Camus, and with Unamuno, Ortega and María Zambrano." },
-      { k: "hf-etica", n: 8, tit: "Classical ethics: intellectualism, virtues and eudaimonia", txt: "In Year 1 you saw emotions and desire, weakness of will (akrasía) and Aristotle’s idea that we learn to feel when we should and in the right measure; in Year 2 you will read his virtue ethics from the inside, set against the intellectualism of Socrates." }
-    ],
-    "fil-t3": [
-      { k: "hf-racionalismo", n: 14, tit: "Rationalism and empiricism: Descartes and Hume", txt: "In Year 1 you saw rationalism and empiricism as opposing sources of knowledge, and Hume’s problem of induction; in Year 2 you will read Descartes and Hume from the inside: methodical doubt, the cogito and the critique of causality." },
-      { k: "hf-kant", n: 19, tit: "Kant’s critical philosophy and the problem of metaphysics", txt: "In Year 1 you saw Kant’s criticism unite reason and experience; in Year 2 you will see how space, time and the categories order experience and why we do not know things ‘in themselves’." },
-      { k: "hf-sofistas", n: 5, tit: "The Greek Enlightenment: the Sophists, Socrates and Aspasia", txt: "In Year 1 you saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; in Year 2 you will see the Sophists and the anthropological turn of the Greek Enlightenment, with Socrates and Aspasia." },
-      { k: "hf-platon", n: 6, tit: "Plato: the theory of Ideas and the Republic", txt: "In Year 1 you saw Plato’s distinction between opinion (doxa) and science (episteme) and his idealism of the Ideas; in Year 2 you will read his full theory of Ideas and the just city of the Republic." },
-      { k: "hf-modernidad", n: 13, tit: "The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution", txt: "In Year 1 you learnt the hypothetico-deductive method and saw how the scientific revolution changed the idea of science and of the cosmos; in Year 2 you will see where that method comes from: Galileo joins reason and experience and reads nature in the language of mathematics, a turn that opens modernity and prepares Descartes’s rationalism (Topic 14)." },
-      { k: "hf-existencialismo", n: 25, tit: "Existentialism: Heidegger, Sartre and Spanish philosophy", txt: "In Year 1 you saw Husserl’s phenomenology and hermeneutics as ways of describing and understanding, and Ortega’s perspectivism: ‘I am I and my circumstance’; in Year 2 you will see Heidegger, Husserl’s disciple, and the existentialists, with Unamuno, Ortega and María Zambrano." },
-      { k: "hf-analitica", n: 24, tit: "Analytic philosophy: Wittgenstein and the linguistic turn", txt: "In Year 1 you saw the scientific method, the problem of induction, Popper’s falsifiability and the boundary between science and pseudoscience; in Year 2 you will see 20th-century philosophy of science, from the Vienna Circle to Feyerabend." },
-      { k: "hf-capitalismo", n: 22, tit: "The critique of capitalism: from Marx to Rawls", txt: "In Year 1 you saw post-truth with Hannah Arendt and Habermas’s idea of a lifeworld colonised by money and power; in Year 2 you will read Arendt and Habermas within the critical tradition, from the Frankfurt School to Rawls." }
-    ],
-    "fil-t4": [
-      { k: "hf-aa", n: "AA", tit: "Aristotle: the complete system", txt: "In Year 1 you saw syllogisms and the square of opposition (in the Logic Corner); in Year 2 you will see logic within Aristotle’s system: the Organon, the classification of the sciences, the categories and how the theory of the syllogism is linked to his metaphysics." },
-      { k: "hf-racionalismo", n: 14, tit: "Rationalism and empiricism: Descartes and Hume", txt: "In Year 1 you saw Boolean algebra, which turns logic into a calculus of 1s and 0s; in Year 2 you will see Descartes’s mathesis universalis, his dream of a universal science of order. Leibniz, who appears in that topic with the monads, took it further: he imagined a language in which reasoning would be calculating. And the cognitive biases of Year 1 have a precedent there: Bacon’s idols, which already described confirmation bias." },
-      { k: "hf-analitica", n: 24, tit: "Analytic philosophy: Wittgenstein and the linguistic turn", txt: "In Year 1 you saw the logic of connectives and their truth tables, quantifiers and the symbolic logic of Frege and Russell; in Year 2 you will see how Russell and the early Wittgenstein use that logical analysis of language to search for a perfect language: this is the linguistic turn of analytic philosophy." }
-    ],
-    "fil-t5": [
-      { k: "hf-etica", n: 8, tit: "Classical ethics: intellectualism, virtues and eudaimonia", txt: "In Year 1 you saw virtue as a mean, the intellectualism of Socrates and the objections raised today against virtue ethics; in Year 2 you will read the whole of classical ethics: areté, eudaimonía and the answers of Socrates, Plato and Aristotle." },
-      { k: "hf-helenismo", n: 10, tit: "Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism", txt: "In Year 1 you saw Epicurus’s hedonism and Stoicism as a virtue ethics: the four virtues, the passions as judgements and the daily training of Seneca and Marcus Aurelius; in Year 2 you will see the whole of Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism." },
-      { k: "hf-etica-deber", n: 20, tit: "Ethics of happiness and ethics of duty: Kant versus utilitarianism", txt: "In Year 1 you saw Kant’s formal ethics, the difference between acting from duty and in accordance with duty, why ethics of duty set limits rather than goals, and the utilitarianism of Bentham and Mill; in Year 2 you will read in depth the clash between the ethics of duty and the ethics of happiness." },
-      { k: "hf-sospecha", n: 21, tit: "The philosophers of suspicion: Marx, Nietzsche and Freud", txt: "In Year 1 you saw Nietzsche’s genealogy of morals: masters and slaves, resentment and the revaluation of values; in Year 2 you will read him in depth alongside Marx and Freud, with his PAU text, Ecce homo." },
-      { k: "hf-utilitarismo", n: 17, tit: "Utilitarianism and liberalism: the foundations of capitalism", txt: "In Year 1 you saw the utilitarianism of Bentham and Mill as an ethics: the greatest happiness for the greatest number and the higher pleasures; in Year 2 you will see it as a basis of liberalism, with Mill’s harm principle and Adam Smith’s market." },
-      { k: "hf-siglo21", n: 27, tit: "Today’s society: challenges of the 21st century", txt: "In Year 1 you saw applied ethics: environmental ethics, Hans Jonas’s duties towards future generations and Peter Singer’s distant poverty; in Year 2 you will see them among the challenges of the 21st century: climate justice and Martha Nussbaum’s capabilities." }
-    ],
-    "fil-t6": [
-      { k: "hf-contrato", n: 16, tit: "The origin of society and power: Machiavelli and the social contract", txt: "In Year 1 you saw why power had to be legitimised, Weber’s types of legitimacy, the social contract of Hobbes, Locke and Rousseau and the criticisms made of it; in Year 2 you will also read Machiavelli and Montesquieu’s idea of limiting power." },
-      { k: "hf-capitalismo", n: 22, tit: "The critique of capitalism: from Marx to Rawls", txt: "In Year 1 you saw Marx’s critique of capitalism — class struggle, surplus value and alienation — and Rawls’s justice with its critics, from the utilitarians to Nozick; in Year 2 you will read how the critical tradition continues in Gramsci, the Frankfurt School, Habermas and Rawls." },
-      { k: "hf-beauvoir", n: 26, tit: "Contemporary feminism: Simone de Beauvoir", txt: "In Year 1 you saw Beauvoir in the waves of feminism and her ‘One is not born, but rather becomes, a woman’; in Year 2 you will read her existentialism in depth, and Butler, Fraser and Nussbaum." },
-      { k: "hf-politica", n: 9, tit: "Classical politics: Plato and Aristotle", txt: "In Year 1 you saw Plato’s Republic as the first great utopia, the just city of the philosopher-kings, and Aristotle define the human being as a political animal; in Year 2 you will read the Republic in depth (Topic 6) and compare the two political models of Plato and Aristotle." },
-      { k: "hf-ilustracion", n: 18, tit: "The Enlightenment project: the power and limits of reason", txt: "In Year 1 you saw the Universal Declaration of Human Rights from the inside, the debate on whether rights are universal, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; in Year 2 you will see the Enlightenment project from which those rights and that critique arise." }
-    ],
-    "hf-aa": [
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw substance, essence, the move from potency to act and moderate realism about universals; here you have studied Aristotle’s complete system: the categories, the four causes and teleology." },
-      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "In Year 1 you already saw syllogisms and the square of opposition (in the Logic Corner); here you have seen that logic within Aristotle’s system: the Organon, the classification of the sciences, the categories and the theory of the syllogism tied to his metaphysics." }
-    ],
-    "hf-analitica": [
-      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "In Year 1 you already saw the symbolic logic of Frege and Russell; here you have seen how that logical analysis of language gives rise to the linguistic turn of Russell and Wittgenstein." },
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw the scientific method, the problem of induction and Popper’s falsifiability; here you have followed 20th-century philosophy of science, from the Vienna Circle to Kuhn and Feyerabend." }
-    ],
-    "hf-existencialismo": [
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the existentialism of Sartre and Beauvoir: ‘existence precedes essence’; here you have studied it with Kierkegaard, Heidegger and Camus." },
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Husserl’s phenomenology, hermeneutics and Ortega’s perspectivism: ‘I am I and my circumstance’; here you have read Heidegger and the existentialists, with Unamuno and María Zambrano." }
-    ],
-    "hf-antropologia": [
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the soul in the mind-body problem, with Plato’s dualism and Aristotle’s soul-as-form; here you have read about the turn of Socrates and the three conceptions of the psyche." }
-    ],
-    "hf-beauvoir": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Beauvoir in the waves of feminism and her ‘One is not born, but rather becomes, a woman’; here you have read her existentialism in depth, and Butler, Fraser and Nussbaum." }
-    ],
-    "hf-capitalismo": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Marx’s critique of capitalism — class struggle, surplus value and alienation — and Rawls’s justice with its critics; here you have read the critical tradition, from Gramsci and the Frankfurt School to Habermas and Rawls." },
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw post-truth with Arendt and Habermas’s lifeworld; here you have read them within the critical tradition that runs from the Frankfurt School to Rawls." }
-    ],
-    "hf-contrato": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw why power had to be legitimised, Weber’s types, the social contract of Hobbes, Locke and Rousseau and its critics; here you have also read Machiavelli and Montesquieu’s separation of powers." }
-    ],
-    "hf-etica": [
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw virtue as a mean, the intellectualism of Socrates and today’s objections to virtue ethics; here you have read classical ethics: what areté and eudaimonía are for Socrates, Plato and Aristotle." },
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw emotions, desire and weakness of will (akrasía); here you have seen why, for Socrates, no one does wrong knowingly, and how Aristotle replies with virtue as a habit." }
-    ],
-    "hf-etica-deber": [
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Kant’s formal ethics, the difference between acting from duty and in accordance with duty, and the utilitarianism of Bentham and Mill; here you have read that clash in depth: the ethics of duty against the ethics of happiness." }
-    ],
-    "hf-fe-razon": [
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw Aquinas’s five ways and the distinction between essence and existence; here you have read the synthesis of faith and reason, with Augustine, Aquinas, Avicenna and Ockham." }
-    ],
-    "hf-helenismo": [
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Epicurus’s hedonism and his ataraxia, and Stoicism as a virtue ethics, with the passions as judgements; here you have read the whole of Hellenism: four schools answering the question of how to live well in an uncertain world." }
-    ],
-    "hf-ilustracion": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw the Universal Declaration of Human Rights from the inside, the debate on its universality, the social contract and the first wave of feminism of Olympe de Gouges and Wollstonecraft; here you have studied the Enlightenment project from which those rights and that critique arise." }
-    ],
-    "hf-kant": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Kant’s criticism as a synthesis of rationalism and empiricism; here you have read his critical philosophy in depth: phenomenon, noumenon and the limits of reason." }
-    ],
-    "hf-medieval": [
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw the problem of universals and the arguments about God of Anselm and Aquinas; here you have read the Middle Ages that frame them: the relation between faith and reason, its stages and the dispute over universals." }
-    ],
-    "hf-metafisica": [
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw the mind-body problem, with Descartes’s dualism and Hobbes’s materialism; here you have read that modern debate in full, with Spinoza’s monism and Locke’s turn." },
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw monism, dualism and materialism as positions on substance; here you have read that debate in the modern age, with Descartes, Hobbes, Spinoza and Locke." }
-    ],
-    "hf-modernidad": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw the Scientific Revolution and Galileo’s hypothetico-deductive method, and how they changed the idea of science and of the cosmos; here you have gone through the Renaissance and that revolution as the birth of modernity." }
+    "hf-historicidad": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw what philosophy is; here you distinguish its historicity and its universality."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the question about the human being; here you treat it as a universal question that reappears in each context."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw that asking what exists is inevitable; here you see how that question reappears historically."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw the question of the good life; here you see why it reappears in different contexts."}
     ],
     "hf-mito": [
-      { k: "fil-t1", n: 1, tit: "What is philosophy?", txt: "In Year 1 you already saw the move from myth to logos and the question of whether philosophy was born only in Greece; here you have read about the birth of philosophy in Ionia and discussed the ‘Greek miracle’." }
-    ],
-    "hf-platon": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Plato’s distinction between opinion (doxa) and science (episteme) and his idealism of the Ideas; here you have studied the full theory of Ideas and the path of knowledge towards the Good." },
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Plato’s Republic as the first great utopia, the just city ruled by philosophers; here you have read it in depth, together with his theory of the soul and of the Ideas." }
-    ],
-    "hf-politica": [
-      { k: "fil-t6", n: 6, tit: "Life in society (Political philosophy)", txt: "In Year 1 you already saw Aristotle define the human being as a political animal and Plato’s Republic as a just city; here you have compared in depth their two models of the best community." }
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the passage from myth to logos; here you study its historical conditions and its tensions."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the affinity between science and philosophy; here you trace it in the passage from myth to logos."}
     ],
     "hf-preso": [
-      { k: "fil-t1", n: 1, tit: "What is philosophy?", txt: "In Year 1 you already saw Thales’s arché as the first step of logos; here you have gone through the Presocratics’ answers to the question of reality and of the principle of everything." }
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the rational origin of philosophy; here you make concrete that search in the problem of physis and arché."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the enigma of identity; here you connect it with the Presocratic problem of change."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the appearance/reality opposition; here you place it in the Presocratic problem of being."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw beauty as number; here you return to the Pythagoreans as philosophers of physis."}
     ],
-    "hf-racionalismo": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw rationalism and empiricism, and Hume’s problem of induction; here you have read Descartes and Hume from the inside: doubt, the cogito and the critique of causality." },
-      { k: "fil-t4", n: 4, tit: "Logic and argumentation", txt: "In Year 1 you already saw Boolean algebra and binary logic (1 and 0); here you have seen Descartes’s mathesis universalis, the dream of a universal science of order. Leibniz, who appears in this topic with the monads, took it further: a language in which reasoning would be calculating. And Bacon’s idols, which you have seen here, already appeared in Year 1 as a forerunner of cognitive biases, starting with confirmation bias." }
+    "hf-platon": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the types of knowledge; here you distinguish opinion and science in Plato."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the body-soul separation; here Plato grounds it in his theory of Ideas."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the tension between senses and reason; here you explain it from the Platonic theory of Ideas."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the suspicion about the senses; here Plato transforms it into the theory of Ideas."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw moral objectivism; here Plato gives it its metaphysical foundation."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"In Year 1 you already saw the Republic as a just city; here you will learn its foundation: the world of Ideas."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw that beauty could be understood as something objective; here Plato elevates it to an Idea."}
     ],
-    "hf-sofistas": [
-      { k: "fil-t3", n: 3, tit: "What can we know?", txt: "In Year 1 you already saw Protagoras’s relativism — ‘man is the measure of all things’ — among the positions on truth; here you have placed it in its world: the Greek Enlightenment and the Sophists’ turn towards the human being and the polis." }
+    "hf-metodos": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the features of philosophical knowledge; here you turn them into methods: argument, interpretation and research."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"In Year 1 you already saw that Aristotle founded logic; here you place that method within the whole of philosophy."}
     ],
-    "hf-sospecha": [
-      { k: "fil-t2", n: 2, tit: "What is the human being?", txt: "In Year 1 you already saw Marx, Nietzsche and Freud among the conceptions of the human being — labour, the overman and an ‘I’ that ‘is not master in its own house’; here you have read them together as the masters of suspicion." },
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw Nietzsche’s genealogy of morals: masters and slaves, resentment and the revaluation of values; here you have read him in depth, with his PAU text." }
+    "hf-ilustracion": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the critical attitude; here the Enlightenment turns it into a public project of reason."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the idea of not letting oneself be deceived; here you develop it as the Enlightenment motto of sapere aude."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw moral autonomy; here you frame it within the Enlightenment project."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"In Year 1 you already saw the feminist waves; here the first one demands its share of Enlightenment reason."}
     ],
-    "hf-utilitarismo": [
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw the utilitarianism of Bentham and Mill as an ethics: the greatest happiness for the greatest number and the higher pleasures; here you have read it as a basis of liberalism, with Mill’s harm principle and Adam Smith’s market." }
+    "hf-kant": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the branches of philosophy; here Kant organises them in his four questions and examines metaphysics."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the question ‘what can we know?’; here you study it as Kant's critical project."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw what metaphysics is; here Kant examines why it cannot be a scientific knowledge."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw the aesthetic Kant; here you place him within his critique of reason."}
+    ],
+    "hf-metafisica": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw what metaphysics is; here you enter the modern debate between dualism and materialism."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the dualism/monism opposition; here you place it in modern metaphysics."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the types of reality; here you see the modern debate between dualism and materialism."}
+    ],
+    "hf-etica-deber": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw that ethics is a branch; here you distinguish ethics of happiness and ethics of duty."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the idea of person; here Kant grounds it as an end in itself and dignity."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the problem of freedom; here Kant requires it for the ethics of duty."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw Kantian autonomy; here you integrate it into the ethics of duty."}
+    ],
+    "hf-analitica": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the relationship between philosophy and science; here you study the philosophy of science and the linguistic turn."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw that language defines the person; here you study how language orders the world."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the truth of judgements; here you analyse it from language and logic."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"In Year 1 you already saw the logic of Frege and Russell; here you understand why Russell wanted to order the world in words."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw Ayer's emotivism; here you place it within analytic philosophy."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw the problem of defining art; here you rethink it with Wittgenstein and family resemblances."}
+    ],
+    "hf-modernidad": [
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw the philosophy-science dialogue; here the scientific revolution forces a refounding of modern knowledge."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw scientific knowledge; here you place it in the modern scientific revolution."}
     ],
     "hf-siglo21": [
-      { k: "fil-metafisica", n: "M", tit: "Reality: what is there and what is it like? (Metaphysics)", txt: "In Year 1 you already saw artificial intelligence as an object of philosophical study: whether it understands, whether it has a mind and who answers for what it decides; here you have seen it as an infrastructure of everyday life and as a challenge for democracy." },
-      { k: "fil-t5", n: 5, tit: "The questions of ethics", txt: "In Year 1 you already saw environmental ethics, duties towards future generations and distant poverty; here you have seen them as challenges of the 21st century, with climate justice and Nussbaum’s capabilities." }
+      {"k":"fil-t1","n":1,"tit":"What is philosophy?","txt":"In Year 1 you already saw what philosophy is for; here you apply those functions to the challenges of the 21st century."},
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw that culture constructs identity and norms; here you analyse gender and body norms as social constructions."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the problem of post-truth; here you insert it into the challenges of the 21st century."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the problem of artificial mind; here you connect it with the challenges of the virtual world and care."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw the ethics of care; here you apply it to the challenges of the 21st century."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"In Year 1 you already saw global challenges; here they become the map of problems of the 21st century."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw the centrality of the image; here you analyse it as a challenge of the 21st century."}
+    ],
+    "fil-t2": [
+      {"k":"hf-antropologia","n":7,"tit":"Classical anthropology: Socrates, Plato and Aristotle","txt":"In Year 1 you saw that the human being is an enigma to itself."},
+      {"k":"hf-existencialismo","n":25,"tit":"Existentialism: Heidegger, Sartre and Spanish philosophy","txt":"In Year 1 you saw that only the human being asks itself what it is."},
+      {"k":"hf-historicidad","n":1,"tit":"Historicity and universality of philosophy","txt":"In Year 1 you opened a question that is not only scientific."},
+      {"k":"hf-sofistas","n":5,"tit":"The Greek Enlightenment: the Sophists, Socrates and Aspasia","txt":"In Year 1 you distinguished between natural traits and cultural traits."},
+      {"k":"hf-politica","n":9,"tit":"Classical politics: Plato and Aristotle","txt":"In Year 1 you saw that Aristotle defines the human being as zôon politikón."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you saw that identity is formed within a culture."},
+      {"k":"hf-metafisica","n":15,"tit":"The modern metaphysical debate: dualism and materialism","txt":"In Year 1 you saw the mind-body problem and the dualist and monist positions."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you saw that dualism separates body and soul."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw self-consciousness and introspection."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw that language is a deeply human trait."},
+      {"k":"hf-etica-deber","n":20,"tit":"Ethics of happiness and ethics of duty: Kant versus utilitarianism","txt":"In Year 1 you saw the notion of person as a conscious being with language."},
+      {"k":"hf-preso","n":4,"tit":"The problem of reality in the Presocratics","txt":"In Year 1 you saw the problem of personal identity with the ship of Theseus."},
+      {"k":"hf-etica","n":8,"tit":"Classical ethics: intellectualism, virtues and eudaimonia","txt":"In Year 1 you distinguished meaning as the purpose of life."},
+      {"k":"hf-helenismo","n":10,"tit":"Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism","txt":"In Year 1 you saw that there are several answers to the meaning of life."}
+    ],
+    "hf-antropologia": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw that the human being asks about its own being; here Socrates turns that self-questioning into a philosophical method."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the Aristotelian substance; here you use it to understand the soul as the form of the body."}
+    ],
+    "hf-existencialismo": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw that the human being is subject and object of its question; here existentialism starts from that self-reference."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw Ortega and perspectivism; here you integrate him into the Spanish philosophy of vital reason."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw the question of time and change; here Heidegger takes it to human existence."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw that without freedom there is no morality; here Sartre turns freedom into the radical condition of existence."}
+    ],
+    "hf-sofistas": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the nature-culture tension; here the Sophists formulate it as physis/nomos."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"In Year 1 you already saw fallacies; here you see why Socrates confronted the Sophists for their manipulative use of language."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw moral relativism; here you place it in the polis and in Protagoras."}
+    ],
+    "hf-politica": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the definition of political animal; here you develop it within classical politics."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"In Year 1 you already saw how to define; here you use that tool to understand why Aristotle calls the human being 'political animal'."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"In Year 1 you already saw the human being as a social and political animal; here Plato and Aristotle ground it with their texts."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw that art transmits the values of the polis; here you see how Plato regulates it in his ideal city."}
+    ],
+    "hf-racionalismo": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the inward gaze; here Descartes turns it into the first certainty."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you already saw the problem of the sources of knowledge; here you embody it in Descartes and Hume."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you already saw mind-body dualism; here you study it within Cartesian rationalism."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"In Year 1 you already saw the difference between deduction and induction; here you use it to distinguish rationalism and empiricism."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw Hume's emotivist ethics; here you connect it with his empiricism."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you already saw the aesthetic Hume; here you study him as a central figure of empiricism."}
+    ],
+    "hf-etica": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you already saw the question of the purpose of life; here Aristotle answers it with eudaimonia."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you already saw the difference between morality and ethics; here you place it in the classical authors."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"In Year 1 you saw the formative role of the emotions in art; here you connect it with Aristotle's ethics."}
+    ],
+    "hf-helenismo": [
+      {"k":"fil-t2","n":2,"tit":"What is the human being?","txt":"In Year 1 you saw the answers to the question of meaning; here you compare the therapies of the Hellenistic schools."},
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"In Year 1 you saw scepticism as an attitude; here you study it as a Hellenistic school."},
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"In Year 1 you saw the debate about freedom; here you see it in the Hellenistic schools."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"In Year 1 you saw eudaimonist ethics; here you see its Hellenistic developments."}
+    ],
+    "fil-t3": [
+      {"k":"hf-kant","n":19,"tit":"Kant’s critical philosophy and the problem of metaphysics","txt":"In Year 1 you opened the question of the limits of human knowledge."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw that the senses and reason compete as sources of knowledge."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you distinguished the senses and reason as paths to knowledge."},
+      {"k":"hf-helenismo","n":10,"tit":"Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism","txt":"In Year 1 you saw scepticism as a stance towards knowledge."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw truth as a property of our judgements."},
+      {"k":"hf-posmodernidad","n":23,"tit":"Nietzsche and postmodernity: Habermas versus the rupture theorists","txt":"In Year 1 you examined the notion of truth and its criteria."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you saw how post-truth and fake news manipulate conviction."},
+      {"k":"hf-modernidad","n":13,"tit":"The birth of modernity: the Renaissance, Protestantism and the Scientific Revolution","txt":"In Year 1 you saw science as a system of rational knowledge."},
+      {"k":"hf-existencialismo","n":25,"tit":"Existentialism: Heidegger, Sartre and Spanish philosophy","txt":"In Year 1 you saw Ortega's perspectivism and the role of representation."},
+      {"k":"hf-ilustracion","n":18,"tit":"The Enlightenment project: the power and limits of reason","txt":"In Year 1 you saw that knowing serves to avoid being deceived."},
+      {"k":"hf-sospecha","n":21,"tit":"The philosophers of suspicion: Marx, Nietzsche and Freud","txt":"In Year 1 you learnt to distrust what seems evident."},
+      {"k":"hf-mito","n":3,"tit":"The emergence of philosophy: from myth to logos","txt":"In Year 1 you saw that science and philosophy are born of the same rational attitude."}
+    ],
+    "hf-posmodernidad": [
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"You already saw in Year 1 the question of truth; here you put it in crisis with Nietzsche and postmodernity."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"You already saw in Year 1 Nietzschean suspicion; here you see its postmodern legacy."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"You already saw in Year 1 Duchamp's rupture; here you read it as a symptom of postmodernity."}
+    ],
+    "hf-sospecha": [
+      {"k":"fil-t3","n":3,"tit":"What can we know?","txt":"You already saw in Year 1 the need not to be deceived; here you apply it as philosophical suspicion."},
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"You already saw in Year 1 Nietzsche's moral suspicion; here you compare it with Marx and Freud."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"You already saw in Year 1 the Marxist critique of the pact between unequals; here Marx inaugurates economic suspicion."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"You already saw in Year 1 that art transmits values and interests; here you apply philosophical suspicion."}
+    ],
+    "fil-metafisica": [
+      {"k":"hf-kant","n":19,"tit":"Kant’s critical philosophy and the problem of metaphysics","txt":"In Year 1 you saw that science does not replace metaphysics."},
+      {"k":"hf-historicidad","n":1,"tit":"Historicity and universality of philosophy","txt":"In Year 1 you opened the question of reality and existence."},
+      {"k":"hf-preso","n":4,"tit":"The problem of reality in the Presocratics","txt":"In Year 1 you saw Parmenides' suspicion that the world is not what it seems."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you saw that the real may not be the apparent."},
+      {"k":"hf-metafisica","n":15,"tit":"The modern metaphysical debate: dualism and materialism","txt":"In Year 1 you distinguished monism, pluralism, idealism and materialism."},
+      {"k":"hf-antropologia","n":7,"tit":"Classical anthropology: Socrates, Plato and Aristotle","txt":"In Year 1 you saw that substance is the concrete thing composed of matter and form."},
+      {"k":"hf-medieval","n":11,"tit":"Medieval philosophy: stages, methods and the problem of universals","txt":"In Year 1 you distinguished substance, essence and accidents."},
+      {"k":"hf-fe-razon","n":12,"tit":"Faith and reason: the assimilation of Greek philosophy and the existence of God","txt":"In Year 1 you separated essence and existence."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw Descartes' dualism and its problem of interaction."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you asked whether an artificial intelligence could think."},
+      {"k":"hf-existencialismo","n":25,"tit":"Existentialism: Heidegger, Sartre and Spanish philosophy","txt":"In Year 1 you saw that time raises the problem of identity."},
+      {"k":"hf-helenismo","n":10,"tit":"Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism","txt":"In Year 1 you distinguished determinism, libertarianism and compatibilism."},
+      {"k":"hf-etica-deber","n":20,"tit":"Ethics of happiness and ethics of duty: Kant versus utilitarianism","txt":"In Year 1 you saw that without freedom blaming or congratulating would make no sense."}
+    ],
+    "hf-medieval": [
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"You already saw in Year 1 what an essence is; here you see the medieval debate about whether it exists outside the mind."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"You already saw in Year 1 the A, E, I, O propositions; here you ask whether their universal terms really exist."}
+    ],
+    "hf-fe-razon": [
+      {"k":"fil-metafisica","n":"M","tit":"Reality: what is there and what is it like? (Metaphysics)","txt":"You already saw in Year 1 the distinction between essence and existence; here Aquinas uses it to speak of God."},
+      {"k":"fil-t4","n":4,"tit":"Logic and argumentation","txt":"You already saw in Year 1 Ockham's razor; here you relate it to William of Ockham's thought and his idea of faith-reason."}
+    ],
+    "fil-t4": [
+      {"k":"hf-metodos","n":2,"tit":"The methods of philosophy","txt":"In Year 1 you saw that logic is born with Aristotle as the study of the form of reasoning."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw that deduction guarantees the conclusion and induction only makes it probable."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw that Frege and Russell created the formal logic that underpins computer science and analytic philosophy."},
+      {"k":"hf-medieval","n":11,"tit":"Medieval philosophy: stages, methods and the problem of universals","txt":"In Year 1 you saw that categorical propositions speak of all or some S."},
+      {"k":"hf-sofistas","n":5,"tit":"The Greek Enlightenment: the Sophists, Socrates and Aspasia","txt":"In Year 1 you saw that recognising fallacies is defending oneself against deception and manipulation."},
+      {"k":"hf-fe-razon","n":12,"tit":"Faith and reason: the assimilation of Greek philosophy and the existence of God","txt":"In Year 1 you saw that Ockham's razor demands not multiplying assumptions beyond necessity."},
+      {"k":"hf-politica","n":9,"tit":"Classical politics: Plato and Aristotle","txt":"In Year 1 you saw that a good definition combines the proximate genus and the specific difference."}
+    ],
+    "fil-t5": [
+      {"k":"hf-etica","n":8,"tit":"Classical ethics: intellectualism, virtues and eudaimonia","txt":"In Year 1 you distinguished morality and ethics and opened the question of the good life."},
+      {"k":"hf-historicidad","n":1,"tit":"Historicity and universality of philosophy","txt":"In Year 1 you raised the question of the good life as an ethical problem."},
+      {"k":"hf-etica-deber","n":20,"tit":"Ethics of happiness and ethics of duty: Kant versus utilitarianism","txt":"In Year 1 you saw that morality presupposes freedom and that Kant opposes autonomy to heteronomy."},
+      {"k":"hf-existencialismo","n":25,"tit":"Existentialism: Heidegger, Sartre and Spanish philosophy","txt":"In Year 1 you linked freedom and moral responsibility."},
+      {"k":"hf-helenismo","n":10,"tit":"Hellenism: Cynicism, Stoicism, Epicureanism and Scepticism","txt":"In Year 1 you studied the material ethics that seek happiness."},
+      {"k":"hf-ilustracion","n":18,"tit":"The Enlightenment project: the power and limits of reason","txt":"In Year 1 you opposed autonomy and heteronomy."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw Hume's emotivism: moral judgements express feelings."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw that Ayer turns emotivism into an analysis of moral language."},
+      {"k":"hf-sofistas","n":5,"tit":"The Greek Enlightenment: the Sophists, Socrates and Aspasia","txt":"In Year 1 you distinguished moral objectivism, relativism and subjectivism."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you saw that moral objectivism affirms universal moral truths."},
+      {"k":"hf-utilitarismo","n":17,"tit":"Utilitarianism and liberalism: the foundations of capitalism","txt":"In Year 1 you studied Bentham's felicific calculus."},
+      {"k":"hf-sospecha","n":21,"tit":"The philosophers of suspicion: Marx, Nietzsche and Freud","txt":"In Year 1 you saw Nietzsche's genealogy of morality."},
+      {"k":"hf-posmodernidad","n":23,"tit":"Nietzsche and postmodernity: Habermas versus the rupture theorists","txt":"In Year 1 you studied Nietzsche's critique of morality."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you studied the ethics of care of Noddings and Tronto."},
+      {"k":"hf-beauvoir","n":26,"tit":"Contemporary feminism: Simone de Beauvoir","txt":"In Year 1 you saw the ethics of care as a theory in its own right."},
+      {"k":"hf-capitalismo","n":22,"tit":"The critique of capitalism: from Marx to Rawls","txt":"In Year 1 you distinguished the ethics of minima and ethics of maxima."}
+    ],
+    "hf-utilitarismo": [
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"You already saw in Year 1 utilitarianism; here you relate it to liberalism and capitalism."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"You already saw in Year 1 the great ideologies; here liberalism is studied as the foundation of capitalism."}
+    ],
+    "hf-beauvoir": [
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"You already saw in Year 1 the ethics of care; here you inscribe it within contemporary feminism."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"You already saw in Year 1 the waves of feminism; here its ideas are thought through in depth with Beauvoir and Butler."}
+    ],
+    "hf-capitalismo": [
+      {"k":"fil-t5","n":5,"tit":"The questions of ethics","txt":"You already saw in Year 1 the ethics of minima; here you connect it with Rawls and Habermas."},
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"You already saw in Year 1 the veil of ignorance; here Rawls is understood at the end of the debate opened by Marx."},
+      {"k":"fil-t7","n":7,"tit":"What is art? (Aesthetics)","txt":"You already saw in Year 1 the debate about the political role of art; here you situate it in the critique of capitalism."}
+    ],
+    "fil-t6": [
+      {"k":"hf-politica","n":9,"tit":"Classical politics: Plato and Aristotle","txt":"In Year 1 you saw why the human being is a ‘political animal’; in Year 2 you will see how Plato and Aristotle founded political philosophy."},
+      {"k":"hf-contrato","n":16,"tit":"The origin of society and power: Machiavelli and the social contract","txt":"In Year 1 you saw the state as a pact as opposed to a natural community; in Year 2 you will read Hobbes, Locke and Rousseau in their own texts."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you imagined with Plato the just city; in Year 2 you will see the theory of the Forms that sustains it."},
+      {"k":"hf-capitalismo","n":22,"tit":"The critique of capitalism: from Marx to Rawls","txt":"In Year 1 you designed the just society behind the veil of ignorance; in Year 2 Rawls will appear as a response to the critique of capitalism."},
+      {"k":"hf-utilitarismo","n":17,"tit":"Utilitarianism and liberalism: the foundations of capitalism","txt":"In Year 1 you outlined liberalism and socialism; in Year 2 you will see the philosophical bases of liberalism and its critique."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you glimpsed today's challenges; in Year 2 you will think them through with the philosophers of the twenty-first century."},
+      {"k":"hf-ilustracion","n":18,"tit":"The Enlightenment project: the power and limits of reason","txt":"In Year 1 you travelled through the waves of feminism; in Year 2 you will see the first born within the Enlightenment."},
+      {"k":"hf-beauvoir","n":26,"tit":"Contemporary feminism: Simone de Beauvoir","txt":"In Year 1 you studied feminism and the gender perspective; in Year 2 you will read Simone de Beauvoir and Judith Butler."},
+      {"k":"hf-sospecha","n":21,"tit":"The philosophers of suspicion: Marx, Nietzsche and Freud","txt":"In Year 1 you read Marx's critique of capitalist society; in Year 2 he will be one of the masters of suspicion."}
+    ],
+    "hf-contrato": [
+      {"k":"fil-t6","n":6,"tit":"Life in society (Political philosophy)","txt":"You already saw in Year 1 the idea of the pact; here each contractarian defends his own, text by text."}
+    ],
+    "fil-t7": [
+      {"k":"hf-preso","n":4,"tit":"The problem of reality in the Presocratics","txt":"In Year 1 you saw that the Pythagoreans explained beauty through number and proportion."},
+      {"k":"hf-platon","n":6,"tit":"Plato: the theory of Ideas and the Republic","txt":"In Year 1 you saw the objective conception of beauty among the Greeks."},
+      {"k":"hf-racionalismo","n":14,"tit":"Rationalism and empiricism: Descartes and Hume","txt":"In Year 1 you saw that Hume unites the subjectivity of taste and the criterion of the critic."},
+      {"k":"hf-kant","n":19,"tit":"Kant’s critical philosophy and the problem of metaphysics","txt":"In Year 1 you saw that Kant distinguishes taste from mere personal preference."},
+      {"k":"hf-analitica","n":24,"tit":"Analytic philosophy: Wittgenstein and the linguistic turn","txt":"In Year 1 you saw that defining art is difficult because of the diversity of works."},
+      {"k":"hf-etica","n":8,"tit":"Classical ethics: intellectualism, virtues and eudaimonia","txt":"In Year 1 you saw that art can educate or purify emotions and values."},
+      {"k":"hf-capitalismo","n":22,"tit":"The critique of capitalism: from Marx to Rawls","txt":"In Year 1 you saw that art can commit itself or claim autonomy."},
+      {"k":"hf-sospecha","n":21,"tit":"The philosophers of suspicion: Marx, Nietzsche and Freud","txt":"In Year 1 you saw that art is not innocent and can serve interests."},
+      {"k":"hf-politica","n":9,"tit":"Classical politics: Plato and Aristotle","txt":"In Year 1 you saw that art has a political dimension."},
+      {"k":"hf-posmodernidad","n":23,"tit":"Nietzsche and postmodernity: Habermas versus the rupture theorists","txt":"In Year 1 you saw that contemporary art breaks with classical certainties."},
+      {"k":"hf-siglo21","n":27,"tit":"Today’s society: challenges of the 21st century","txt":"In Year 1 you saw that contemporary aesthetics is above all audiovisual."}
     ]
   };
   var WEB_REPO = { fil: "aula-de-filosofia-web", hf: "historia-filosofia-web" };
@@ -657,7 +783,7 @@
     /* (25-10, profesor) el apartado 10 de fil-t1 (modelo de examen) y los presocráticos, como exploraciones; «clave/n» = un apartado */
     ["fil-t1", "int", [], ["fil-t1/10", "fil-presocraticos", "fil-utilidad", "fil-t1-lipman", "fil-grandes-preguntas", "fil-montaigne-ensayos", "fil-spinoza-sistema", "fil-comunidades-perseguidos"]],
     ["fil-t2", "ant", [], []],
-    ["fil-t3", "con", ["fil-t3-semmelweis"], []],
+    ["fil-t3", "con", ["fil-t3-semmelweis"], ["fil-conciencia-espejo"]],
     ["fil-metafisica", "con", [], []],
     ["fil-t4", "log", [], []],
     ["fil-t5", "eti", ["fil-helenismo"], ["fil-t5-minimos-maximos"]],
