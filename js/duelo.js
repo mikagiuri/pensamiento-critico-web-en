@@ -1087,7 +1087,7 @@ const DUELO_TEMAS = [
     "peso": 2
    },
    {
-    "t": "According to you, man saves himself all on his own, by his own strength, and God’s grace is superfluous.",
+    "t": "According to you, the human being saves himself all on his own, by his own strength, and God’s grace is superfluous.",
     "f": "deformar",
     "peso": 3
    },
