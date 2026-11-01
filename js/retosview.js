@@ -3,7 +3,7 @@
    Reutiliza las preguntas de los cuestionarios y añade temporizador, puntos por
    velocidad, racha (multiplicador) y pantalla final con rango y mejor marca. */
 
-const RETO_SUBJ = { fil: "Philosophy 1st Bach.", hf: "History of Philosophy", ipc: "Critical Thinking" };
+const RETO_SUBJ = { fil: "Philosophy 1st Bach.", hf: "History of Philosophy", ipc: "Critical Thinking", mat: "Mathematics I", bio: "Biology" };   // (01-11) mat y bio: Refuerzos
 const RETO_TIME = 15;          // segundos por pregunta (valor por defecto)
 const RETO_TIMES = [10, 15, 20, 30, 45];   // opciones de tiempo que el jugador puede elegir antes de empezar
 const RETO_QUICK = 10;         // nº de preguntas del «reto rápido»
@@ -47,10 +47,10 @@ function renderRetoStart(){
       '<div class="retos-pick"><span class="flabel">Subject</span>' + picks + '</div>' +
       '<div class="retos-pick"><span class="flabel">' + RETO_TLABEL + '</span>' + timePicks + '</div>' +
       '<div class="retos-modes">' +
-        '<button class="retos-quick" id="retoQuick"><span><b>Reto rápido</b>' +
+        '<button class="retos-quick" id="retoQuick"><span><b>Quick challenge</b>' +
           '<span>' + Math.min(RETO_QUICK, nQ) + ' random questions · ' + reto.time + ' s each</span></span>' +
           '<span class="go">▶</span></button>' +
-        (list ? '<div><span class="flabel" style="font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">O elige un cuestionario</span>' +
+        (list ? '<div><span class="flabel" style="font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Or choose a quiz</span>' +
           '<div class="retos-list">' + list + '</div></div>' : '') +
       '</div>' +
     '</div>';
@@ -60,7 +60,7 @@ function renderRetoStart(){
   const quick = document.getElementById("retoQuick");
   if (quick) quick.addEventListener("click", () => {
     const all = retoQuizzesOf(reto.subject).flatMap(([, q]) => q.items.map(it => ({ it, from: q.name })));
-    retoStart(retoShuffle(all).slice(0, RETO_QUICK), "Reto rápido · " + RETO_SUBJ[reto.subject]);
+    retoStart(retoShuffle(all).slice(0, RETO_QUICK), "Quick challenge · " + RETO_SUBJ[reto.subject]);
   });
   box.querySelectorAll("[data-rquiz]").forEach(b => b.addEventListener("click", () => {
     const q = QUIZZES[b.dataset.rquiz];

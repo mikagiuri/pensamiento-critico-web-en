@@ -308,6 +308,33 @@ const DICCIONARIO = [
  },
  {
   "subject": "ipc",
+  "t": "Basic need",
+  "id": "g-ipc-necesidad-basica",
+  "area": "Media and social networks",
+  "tema": "Critical thinking · Media and social networks",
+  "def": "Something we require to live well (eating, keeping warm, learning…).",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
+  "t": "Superfluous desire",
+  "id": "g-ipc-deseo-superfluo",
+  "area": "Media and social networks",
+  "tema": "Critical thinking · Media and social networks",
+  "def": "Something we want, but without which we could live just as well.",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
+  "t": "Diderot effect",
+  "id": "g-ipc-efecto-diderot",
+  "area": "Media and social networks",
+  "tema": "Critical thinking · Media and social networks",
+  "def": "When a new purchase leads us to want others that ‘go with’ it, one after another.",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
   "t": "Verify (cross-check)",
   "id": "g-ipc-verificar",
   "area": "Media and social networks",

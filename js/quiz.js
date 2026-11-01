@@ -16,7 +16,7 @@ let quizReviewing = false;  // true si repasamos solo los fallos (no toca la mej
 
 function quizShuffle(a){ a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-const QUIZ_SUBJECTS = { fil: "Philosophy 1st Bach.", hf: "History of Philosophy", ipc: "Critical Thinking" };
+const QUIZ_SUBJECTS = { fil: "Philosophy 1st Bach.", hf: "History of Philosophy", ipc: "Critical Thinking", mat: "Mathematics I", bio: "Biology" };   // (01-11) mat y bio: Refuerzos
 const QUIZ_EPOCAS = { ant: "Ancient", med: "Medieval", mod: "Modern", ilu: "Enlightenment", con: "Contemporary" };
 /* (12-10) criterio del profesor: en 1.º la fila «Tema» nombra el ÁMBITO filosófico; el código T1… va al tooltip
    y la cabecera de grupo. En HF y en la web local, como antes. */
@@ -30,6 +30,9 @@ const QUIZ_TEMAS = {
   hf: { T1: "Historicity and universality", T2: "The methods of philosophy", T3: "From myth to logos", T4: "The Presocratics", T5: "Sophists, Socrates and Aspasia", T6: "Plato: Forms and The Republic", T7: "Classical anthropology", T8: "Classical ethics", T9: "Classical politics", T10: "Hellenism",
     T11: "Medieval philosophy and universals", T12: "Faith and reason", T13: "The Renaissance and the scientific revolution", T14: "Rationalism and empiricism", T15: "Dualism and materialism", T16: "Society and power: the social contract", T17: "Utilitarianism and liberalism",
     T18: "The Enlightenment", T19: "Kant: critique and metaphysics", T20: "Ethics of happiness and of duty", T21: "The masters of suspicion", T22: "Critique of capitalism: from Marx to Rawls", T23: "Nietzsche and postmodernity", T24: "Analytic philosophy", T25: "Existentialism", T26: "Feminism", T27: "Challenges of the 21st century" },
+  /* (01-11) Refuerzos: los temas del Decreto 76/2023. Un cuestionario «mat-tN…» o «bio-tN…» va solo a su tema (quizTemaDe) */
+  mat: { T1: "Real numbers", T2: "Complex numbers", T3: "Counting techniques", T4: "Equations, inequalities and systems", T5: "Trigonometry", T6: "Vectors in the plane", T7: "Analytic geometry in the plane", T8: "Functions", T9: "Limits and continuity", T10: "Derivatives", T11: "Bivariate statistics", T12: "Probability" },
+  bio: { T1: "The scientific project", T2: "History of the Earth and life", T3: "The dynamics and composition of the Earth", T4: "Ecology and sustainability", T5: "Plant physiology and histology", T6: "Animal physiology and histology", T7: "Microorganisms" },
   ipc: { pensar: "Thinking for yourself", argumentar: "Arguing well", falacias: "Fallacies and hoaxes", sesgos: "Biases", dialogo: "Holding a dialogue", medios: "Media and advertising", grupo: "The group", huella: "My footprint on the planet" }
 };
 const QUIZ_TEMA = {
@@ -137,7 +140,8 @@ function lexMontar(){
     if (gr.tema !== "otros") QUIZ_TEMA[k] = gr.tema;
   });
 }
-function quizTemaDe(k){ const m = QUIZ_TEMAS[QUIZZES[k].subject] || {}; return m[QUIZ_TEMA[k]] ? QUIZ_TEMA[k] : "otros"; }
+function quizTemaDe(k){ const m = QUIZ_TEMAS[QUIZZES[k].subject] || {}, r = /^(?:mat|bio)-t(\d+)/.exec(k), t = QUIZ_TEMA[k] || (r ? "T" + r[1] : null);   // (01-11) Refuerzos: el tema sale de la clave
+  return m[t] ? t : "otros"; }
 function quizEnFiltro(k, q, conTema){
   if (quizSubject !== "all" && q.subject !== quizSubject) return false;
   if (quizSubject === "hf" && quizBlock !== "all" && window.Epocas && window.Epocas.epocaDe("cuestionarios", k, q) !== quizBlock) return false;
@@ -157,7 +161,7 @@ const quizTemaNum = t => /^T\d+$/.test(t);
 
 function renderQuizFilter(){
   const box = document.getElementById("quizfilter");
-  const subjBtns = ["all", "fil", "hf", "ipc"].map(s =>
+  const subjBtns = ["all", "fil", "hf", "ipc"].concat(["mat", "bio"].filter(s => Object.values(QUIZZES).some(x => x && x.subject === s))).map(s =>   // (01-11) mat y bio: solo si hay (maestra y Refuerzos)
     '<button class="fbtn" data-subj="' + s + '" aria-pressed="' + (s === quizSubject) + '">' +
     (s === "all" ? "All" : QUIZ_SUBJECTS[s]) + '</button>'
   ).join("");

@@ -336,7 +336,7 @@ const INFOGRAFIAS = {
       "h": "Need or want?",
       "rows": [
        {
-        "t": "Necessity",
+        "t": "Basic need",
         "p": "What is required in order to <b>live</b>: food, shelter, health, affection."
        },
        {
