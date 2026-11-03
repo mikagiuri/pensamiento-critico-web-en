@@ -98,7 +98,7 @@ const SUBJECTS = {
 };
 const DECKS = {
  "ipc-conceptos": {
-  "name": "Critical Thinking · Basic concepts",
+  "name": "Basic concepts",
   "subject": "ipc",
   "cards": [
    [
@@ -159,7 +159,7 @@ const DECKS = {
   ]
  },
  "ipc-falacias": {
-  "name": "Critical Thinking · Fallacies",
+  "name": "Fallacies",
   "subject": "ipc",
   "cards": [
    [
@@ -215,7 +215,7 @@ const DECKS = {
   ]
  },
  "ipc-sesgos": {
-  "name": "Critical Thinking · Cognitive biases",
+  "name": "Cognitive biases",
   "subject": "ipc",
   "cards": [
    [
@@ -256,7 +256,7 @@ const DECKS = {
   ]
  },
  "ipc-publicidad": {
-  "name": "Critical Thinking · Advertising and the media",
+  "name": "Advertising and the media",
   "subject": "ipc",
   "cards": [
    [
@@ -302,7 +302,7 @@ const DECKS = {
   ]
  },
  "ipc-huella": {
-  "name": "Critical Thinking · My footprint on the planet",
+  "name": "My footprint on the planet",
   "subject": "ipc",
   "cards": [
    [
@@ -348,7 +348,7 @@ const DECKS = {
   ]
  },
  "ipc-prejuicios": {
-  "name": "Critical Thinking · Prejudices and stereotypes",
+  "name": "Prejudices and stereotypes",
   "subject": "ipc",
   "cards": [
    [
@@ -414,7 +414,7 @@ const DECKS = {
   ]
  },
  "ipc-moda": {
-  "name": "Critical Thinking · Fast fashion (documentary)",
+  "name": "Fast fashion (documentary)",
   "subject": "ipc",
   "cards": [
    [
@@ -1503,7 +1503,7 @@ const QUIZZES = {
   ]
  },
  "ipc-pensar-banco": {
-  "name": "Thinking for yourself (expanded bank)",
+  "name": "Thinking for yourself",
   "subject": "ipc",
   "items": [
    {
@@ -1784,7 +1784,7 @@ const QUIZZES = {
   ]
  },
  "ipc-argumentar-banco": {
-  "name": "Arguing well (extended bank)",
+  "name": "Arguing well",
   "subject": "ipc",
   "items": [
    {
@@ -2098,7 +2098,7 @@ const QUIZZES = {
   ]
  },
  "ipc-falacias-banco": {
-  "name": "Fallacies: tricks of bad reasoning (extended bank)",
+  "name": "Fallacies: Tricks of Bad Reasoning",
   "subject": "ipc",
   "items": [
    {
@@ -2434,7 +2434,7 @@ const QUIZZES = {
   ]
  },
  "ipc-sesgos-banco": {
-  "name": "The traps of the mind: biases (extended bank)",
+  "name": "Traps of the Mind: Biases",
   "subject": "ipc",
   "items": [
    {
@@ -2770,7 +2770,7 @@ const QUIZZES = {
   ]
  },
  "ipc-dialogo-banco": {
-  "name": "The art of dialogue (extended bank)",
+  "name": "The Art of Dialogue",
   "subject": "ipc",
   "items": [
    {
@@ -2985,7 +2985,7 @@ const QUIZZES = {
   ]
  },
  "ipc-medios-banco": {
-  "name": "Look at the media through a magnifying glass (extended bank)",
+  "name": "Look at the media through a magnifying glass",
   "subject": "ipc",
   "items": [
    {
@@ -3299,7 +3299,7 @@ const QUIZZES = {
   ]
  },
  "ipc-grupo-banco": {
-  "name": "Are we a group or a heap? Cohesion (extended bank)",
+  "name": "Are We a Group or a Crowd? Cohesion",
   "subject": "ipc",
   "items": [
    {
